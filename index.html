@@ -268,6 +268,29 @@
       max-width: 56ch;
     }
 
+    /* ─── PULL QUOTE ─── */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      padding: 1rem 0 1rem 1.5rem;
+      margin: 2rem 0;
+      max-width: 52ch;
+    }
+    .pull-quote blockquote {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+    .pull-quote cite {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-style: normal;
+    }
+
     /* ─── BOOK CLUB ─── */
     .bookclub-intro {
       font-size: 0.96rem;
@@ -333,6 +356,7 @@
       width: 36px;
     }
     .sessions-table .text-title { font-style: italic; }
+    @media (max-width: 720px) { .loc-col { display: none; } .loc-cell { display: none; } }
     .badge {
       display: inline-block;
       font-size: 0.62rem;
@@ -389,6 +413,9 @@
 
     /* ─── MOBILE ─── */
     .mobile-header {
+      display: none;
+    }
+    .mobile-nav {
       display: none;
     }
 
@@ -521,9 +548,14 @@
 
         <p>I am a researcher, educator, and community builder whose work lives at the intersection of literary education, belonging, and the question of what books do to us — and for us — when we read them together.</p>
 
-        <p>I recently completed my PhD in English Education at Teachers College, Columbia University, where my dissertation, <em>"A Book Club in the Web of Living Literature,"</em> studied how a voluntary reading community among international students becomes a space of rooting, nourishment, and shared meaning-making. My research is deeply inspired by seven years teaching in an international school in Bangalore, India, where I used book clubs, immersive reading projects, and literary field trips to bring students into the literary realm.</p>
+        <p>I recently completed my PhD in English Education at Teachers College, Columbia University, where my dissertation, <em>"A Book Club in the Web of Living Literature,"</em> studied how a voluntary reading community among international students becomes a space of rooting, nourishment, and shared meaning-making — animating what I call a geography of literary hope. My research is deeply inspired by seven years teaching in an international school in Bangalore, India, where I used book clubs, immersive reading projects, and literary field trips to bring students into the literary realm.</p>
 
         <p>Alongside my doctoral research, I have taught graduate courses in literature pedagogy — including the Teaching of Shakespeare — and founded the I-House Book Club at Columbia's international graduate residential community.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Who are these wild geese who help me find home? In books, and without."</blockquote>
+          <cite>— Tara Maria Fernandes, 2026</cite>
+        </div>
 
         <div class="edu-block">
           <div class="edu-label">Education</div>
@@ -613,7 +645,7 @@
       <div class="research-item">
         <div class="research-meta">PhD Dissertation · 2026</div>
         <div class="research-title">A Book Club in the Web of Living Literature</div>
-        <div class="research-desc">A post-qualitative study of the I-House Book Club at Columbia University, examining how a voluntary literary community among international graduate students creates spaces of belonging, identity, and shared literary experience. Draws on Cixous, Booth, and post-qualitative methodologies to ask what it means to animate a geography of literary hope. Teachers College, Columbia University.</div>
+        <div class="research-desc">A post-qualitative study of the I-House Book Club at Columbia University, examining how a voluntary literary community among international graduate students creates spaces of belonging, identity, and connection — what I call the literary electric. Drawing on Hélène Cixous, Wayne Booth, Mary Oliver, and post-qualitative methodologies, the dissertation asks what it means to animate a geography of literary hope and inject hope into the landscape of English Education. Fragmented in form and embodied in method, it insists that the researcher-body is implicated in the study of literary space. Teachers College, Columbia University.</div>
       </div>
 
       <div class="research-item">
@@ -650,11 +682,11 @@
 
       <div class="bookclub-stat-row">
         <div class="bookclub-stat">
-          <span class="num">27</span>
+          <span class="num">28</span>
           <span class="lbl">Sessions</span>
         </div>
         <div class="bookclub-stat">
-          <span class="num">2.5</span>
+          <span class="num">2.5+</span>
           <span class="lbl">Years running</span>
         </div>
         <div class="bookclub-stat">
@@ -674,6 +706,7 @@
             <th>#</th>
             <th>Text</th>
             <th>Author</th>
+            <th class="loc-col">Location</th>
             <th>Form</th>
           </tr>
         </thead>
@@ -714,34 +747,34 @@
 <script>
 /* ─── BOOK CLUB DATA ─── */
 const sessions = [
-  { n: 1,  date: 'Oct 2023', text: 'Inaugural Meeting', author: '', form: 'misc' },
-  { n: 2,  date: 'Nov 2023', text: 'The Ones Who Walk Away from Omelas', author: 'Ursula K. Le Guin', form: 'story' },
-  { n: 3,  date: 'Dec 2023', text: 'Ghachar Gochar', author: 'Vivek Shanbhag', form: 'novella' },
-  { n: 4,  date: 'Jan 2024', text: 'A Fist or a Heart', author: 'Kristin Eiríksdóttir', form: 'novel' },
-  { n: 5,  date: 'Feb 2024', text: 'Seven Brief Lessons on Physics', author: 'Carlo Rovelli', form: 'nonfic' },
-  { n: 6,  date: 'Mar 2024', text: 'The Stranger', author: 'Albert Camus', form: 'novella' },
-  { n: 7,  date: 'Apr 2024', text: 'Sea Oak', author: 'Lydia Davis & George Saunders', form: 'story' },
-  { n: 8,  date: 'May 2024', text: 'Things Fall Apart', author: 'Chinua Achebe', form: 'novel' },
-  { n: 9,  date: 'Jun 2024', text: 'Short stories', author: 'Ted Chiang', form: 'story' },
-  { n: 10, date: 'Sep 2024', text: 'Klara and the Sun', author: 'Kazuo Ishiguro', form: 'novel' },
-  { n: 11, date: 'Oct 2024', text: 'Chronicle of a Death Foretold', author: 'Gabriel García Márquez', form: 'novella' },
-  { n: 12, date: 'Nov 2024', text: 'My Dungeon Shook; Notes of a Native Son; A Talk to Teachers', author: 'James Baldwin', form: 'misc' },
-  { n: 13, date: 'Dec 2024', text: 'The Swimmer; Cathedral', author: 'John Cheever & Raymond Carver', form: 'story' },
-  { n: 14, date: 'Jan 2025', text: 'Orbital', author: 'Samantha Harvey', form: 'novel' },
-  { n: 14, date: 'Feb 2025', text: 'The Lady with the Dog; The Death of Ivan Ilyich', author: 'Chekhov & Tolstoy', form: 'story' },
-  { n: 15, date: 'Mar 2025', text: 'Open City', author: 'Teju Cole', form: 'novel' },
-  { n: 16, date: 'Apr 2025', text: 'Poor Economics', author: 'Banerjee & Duflo', form: 'nonfic' },
-  { n: 17, date: 'May 2025', text: 'Poetry of Hope', author: 'Poetry circle', form: 'poetry' },
-  { n: 18, date: 'Jun 2025', text: 'Stone Mattress; Springtime à la Carte', author: 'Margaret Atwood & O. Henry', form: 'story' },
-  { n: 19, date: 'Jul 2025', text: 'Small Things Like These', author: 'Claire Keegan', form: 'novella' },
-  { n: 20, date: 'Aug 2025', text: 'The Liminal: Transitions, Farewells and New Beginnings', author: 'Kiran Desai', form: 'poetry' },
-  { n: 21, date: 'Sep 2025', text: 'Bartleby, the Scrivener', author: 'Herman Melville', form: 'story' },
-  { n: 22, date: 'Oct 2025', text: 'Jeeves Takes Charge; The Custody of the Pumpkin', author: 'P.G. Wodehouse', form: 'story' },
-  { n: 23, date: 'Nov 2025', text: 'The Disappeared; The Old Man in the Piazza', author: 'Salman Rushdie', form: 'story' },
-  { n: 24, date: 'Dec 2025', text: 'Words in Motion: A Writing Workshop with Sharon Ordor', author: '', form: 'misc' },
-  { n: 25, date: 'Jan 2026', text: 'Flesh', author: 'David Szalay', form: 'novel' },
-  { n: 26, date: 'Feb 2026', text: 'English', author: 'Sanaz Toossi', form: 'misc' },
-  { n: 27, date: 'Mar 2026', text: 'Wuthering Heights', author: 'Emily Brontë', form: 'novel' },
+  { n: 1,  date: '19 Oct 2023', text: 'Inaugural Meeting', author: '', form: 'misc', loc: 'Dodge Room' },
+  { n: 2,  date: '9 Nov 2023',  text: 'The Ones Who Walk Away from Omelas', author: 'Ursula K. Le Guin', form: 'story', loc: 'Dodge Room' },
+  { n: 3,  date: '7 Dec 2023',  text: 'Ghachar Gochar', author: 'Vivek Shanbhag', form: 'novella', loc: 'Dodge Room' },
+  { n: 4,  date: '27 Jan 2024', text: 'A Fist or a Heart', author: 'Kristin Eiríksdóttir', form: 'novel', loc: 'Dodge Room' },
+  { n: 5,  date: '22 Feb 2024', text: 'Seven Brief Lessons on Physics', author: 'Carlo Rovelli', form: 'nonfic', loc: 'Dodge Room' },
+  { n: 6,  date: '21 Mar 2024', text: 'The Stranger', author: 'Albert Camus', form: 'novella', loc: 'Dodge Room' },
+  { n: 7,  date: '24 Apr 2024', text: 'Sea Oak', author: 'Lydia Davis & George Saunders', form: 'story', loc: 'Dodge Room' },
+  { n: 8,  date: '16 May 2024', text: 'Things Fall Apart', author: 'Chinua Achebe', form: 'novel', loc: 'Dodge Room' },
+  { n: 9,  date: '13 Jun 2024', text: 'Short stories', author: 'Ted Chiang', form: 'story', loc: 'Sakura Park' },
+  { n: 10, date: '5 Sep 2024',  text: 'Klara and the Sun', author: 'Kazuo Ishiguro', form: 'novel', loc: 'North Building Lounge' },
+  { n: 11, date: '17 Oct 2024', text: 'Chronicle of a Death Foretold', author: 'Gabriel García Márquez', form: 'novella', loc: 'Dodge Room' },
+  { n: 12, date: '7 Nov 2024',  text: 'My Dungeon Shook; Notes of a Native Son; A Talk to Teachers', author: 'James Baldwin', form: 'misc', loc: 'Dodge Room' },
+  { n: 13, date: '12 Dec 2024', text: 'The Swimmer; Cathedral', author: 'John Cheever & Raymond Carver', form: 'story', loc: 'Dodge Room' },
+  { n: 14, date: '23 Jan 2025', text: 'Orbital', author: 'Samantha Harvey', form: 'novel', loc: 'Home Room' },
+  { n: 15, date: '18 Feb 2025', text: 'The Lady with the Dog; The Death of Ivan Ilyich', author: 'Chekhov & Tolstoy', form: 'story', loc: 'Dodge Room' },
+  { n: 16, date: '26 Mar 2025', text: 'Open City', author: 'Teju Cole', form: 'novel', loc: 'Dodge Room' },
+  { n: 17, date: '24 Apr 2025', text: 'Poor Economics', author: 'Banerjee & Duflo', form: 'nonfic', loc: 'Home Room' },
+  { n: 18, date: '29 May 2025', text: 'Poetry of Hope', author: 'Poetry circle', form: 'poetry', loc: 'Dodge Room' },
+  { n: 19, date: '24 Jun 2025', text: 'Stone Mattress; Springtime à la Carte', author: 'Margaret Atwood & O. Henry', form: 'story', loc: 'Davis Hall' },
+  { n: 20, date: '29 Jul 2025', text: 'Small Things Like These', author: 'Claire Keegan', form: 'novella', loc: 'Dodge Room' },
+  { n: 21, date: '14 Aug 2025', text: 'The Liminal: Transitions, Farewells and New Beginnings', author: 'Kiran Desai', form: 'poetry', loc: 'Sakura Park' },
+  { n: 22, date: '18 Sep 2025', text: 'Bartleby, the Scrivener', author: 'Herman Melville', form: 'story', loc: 'Sakura Park' },
+  { n: 23, date: '23 Oct 2025', text: 'Jeeves Takes Charge; The Custody of the Pumpkin', author: 'P.G. Wodehouse', form: 'story', loc: 'Dodge Room' },
+  { n: 24, date: '20 Nov 2025', text: 'The Disappeared; The Old Man in the Piazza', author: 'Salman Rushdie', form: 'story', loc: 'I-House Pub' },
+  { n: 25, date: '4 Dec 2025',  text: 'Words in Motion: A Writing Workshop with Sharon Ordor', author: '', form: 'misc', loc: 'I-House Pub' },
+  { n: 26, date: 'Jan 2026',    text: 'Flesh', author: 'David Szalay', form: 'novel', loc: '' },
+  { n: 27, date: 'Feb 2026',    text: 'English', author: 'Sanaz Toossi', form: 'misc', loc: '' },
+  { n: 28, date: 'Mar 2026',    text: 'Wuthering Heights', author: 'Emily Brontë', form: 'novel', loc: '' },
 ];
 
 const badgeMap = {
@@ -761,6 +794,7 @@ sessions.forEach(s => {
     <td class="session-num">${s.n}</td>
     <td><span class="text-title">${s.text}</span><br><small style="color:var(--ink-soft);font-size:0.75rem">${s.date}</small></td>
     <td style="font-size:0.84rem;color:var(--ink-mid)">${s.author}</td>
+    <td class="loc-cell" style="font-size:0.8rem;color:var(--ink-soft)">${s.loc}</td>
     <td><span class="badge ${cls}">${lbl}</span></td>
   `;
   tbody.appendChild(tr);
