@@ -412,6 +412,9 @@
     }
 
     /* ─── MOBILE ─── */
+    .mobile-wrapper {
+      display: none;
+    }
     .mobile-header {
       display: none;
     }
@@ -424,16 +427,19 @@
 
       .sidebar { display: none; }
 
+      .mobile-wrapper {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        background: var(--ivory);
+      }
       .mobile-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1.2rem 1.5rem;
         border-bottom: 1px solid var(--sage-light);
-        position: sticky;
-        top: 0;
-        background: var(--ivory);
-        z-index: 200;
       }
       .mobile-header-name {
         font-family: var(--font-display);
@@ -492,16 +498,18 @@
 <canvas id="web-canvas" aria-hidden="true"></canvas>
 
 <!-- Mobile header -->
-<header class="mobile-header">
-  <span class="mobile-header-name">Tara Maria Fernandes</span>
-  <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">Menu</button>
-</header>
-<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-  <a href="#about" onclick="closeMobileNav()">About</a>
-  <a href="#research" onclick="closeMobileNav()">Research</a>
-  <a href="#bookclub" onclick="closeMobileNav()">Book Club</a>
-  <a href="#contact" onclick="closeMobileNav()">Contact</a>
-</nav>
+<div class="mobile-wrapper">
+  <header class="mobile-header">
+    <span class="mobile-header-name">Tara Maria Fernandes</span>
+    <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">Menu</button>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#research" onclick="closeMobileNav()">Research</a>
+    <a href="#bookclub" onclick="closeMobileNav()">Book Club</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  </nav>
+</div>
 
 <div class="site-wrapper">
 
