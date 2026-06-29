@@ -746,17 +746,23 @@ draw();
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('#sidebar-nav a');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navLinks.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
-      });
-    }
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
+function updateActiveNav() {
+  const scrollY = window.scrollY;
+  const atBottom = (window.innerHeight + scrollY) >= document.body.scrollHeight - 10;
 
-sections.forEach(s => observer.observe(s));
+  let current = sections[0].id;
+  sections.forEach(s => {
+    if (scrollY >= s.offsetTop - window.innerHeight * 0.35) current = s.id;
+  });
+  if (atBottom) current = sections[sections.length - 1].id;
+
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
 
 /* ─── MOBILE NAV ─── */
 function toggleMobileNav() {
