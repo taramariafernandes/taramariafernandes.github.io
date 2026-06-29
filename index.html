@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tara Maria Fernandes</title>
+  <meta name="description" content="Tara Maria Fernandes — PhD, Teachers College Columbia University. Researcher, educator, and founder of the I-House Book Club." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=EB+Garamond:ital@1&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --sage:       #7a9e7e;
+      --sage-light: #c8dbc9;
+      --sage-pale:  #eef4ee;
+      --ivory:      #f8f5ef;
+      --ink:        #1e2a1f;
+      --ink-mid:    #3d4f3e;
+      --ink-soft:   #6b7d6c;
+      --gold:       #c49a3c;
+      --gold-light: #f0dfa5;
+      --white:      #ffffff;
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Inter', system-ui, sans-serif;
+      --font-serif:   'EB Garamond', Georgia, serif;
+
+      --nav-w: 220px;
+      --content-max: 680px;
+    }
+
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── WEB CANVAS (signature element) ─── */
+    #web-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.18;
+    }
+
+    /* ─── LAYOUT ─── */
+    .site-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ─── SIDEBAR NAV ─── */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: var(--nav-w);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 2rem;
+      border-right: 1px solid var(--sage-light);
+      background: var(--ivory);
+      z-index: 100;
+    }
+
+    .sidebar-name {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      margin-bottom: 0.25rem;
+    }
+    .sidebar-title {
+      font-size: 0.72rem;
+      color: var(--ink-soft);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .sidebar-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+    .sidebar-nav a {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--ink-mid);
+      padding: 0.4rem 0;
+      border-left: 2px solid transparent;
+      padding-left: 0.75rem;
+      transition: color 0.2s, border-color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .sidebar-nav a:hover,
+    .sidebar-nav a.active {
+      color: var(--ink);
+      border-left-color: var(--gold);
+    }
+
+    .sidebar-bottom {
+      margin-top: auto;
+    }
+    .sidebar-bottom a {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      margin-bottom: 0.4rem;
+      transition: color 0.2s;
+    }
+    .sidebar-bottom a:hover { color: var(--sage); }
+
+    /* ─── MAIN CONTENT ─── */
+    main {
+      margin-left: var(--nav-w);
+      flex: 1;
+      padding: 0 4rem 6rem 4.5rem;
+      max-width: calc(var(--content-max) + var(--nav-w) + 8rem);
+    }
+
+    /* ─── SECTIONS ─── */
+    .section {
+      padding: 5rem 0 3rem;
+      border-bottom: 1px solid var(--sage-light);
+    }
+    .section:last-of-type { border-bottom: none; }
+
+    /* ─── HERO / ABOUT ─── */
+    #about {
+      padding-top: 5rem;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .hero-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+    .hero-heading em {
+      font-style: italic;
+      color: var(--sage);
+    }
+    .about-photo-wrap {
+      float: right;
+      margin: 0 0 1.5rem 2.5rem;
+      width: 170px;
+    }
+    .about-photo-wrap img {
+      width: 100%;
+      border-radius: 2px;
+      filter: sepia(8%) saturate(90%);
+    }
+    .about-photo-caption {
+      font-size: 0.68rem;
+      color: var(--ink-soft);
+      margin-top: 0.4rem;
+      letter-spacing: 0.03em;
+    }
+    .about-body p {
+      font-size: 0.96rem;
+      color: var(--ink-mid);
+      margin-bottom: 1.1rem;
+      max-width: 58ch;
+    }
+    .clearfix::after { content: ''; display: table; clear: both; }
+
+    /* education */
+    .edu-block {
+      margin-top: 2rem;
+    }
+    .edu-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .edu-item {
+      padding: 0.6rem 0;
+      border-top: 1px solid var(--sage-light);
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 1.2rem;
+      align-items: baseline;
+    }
+    .edu-year {
+      font-size: 0.75rem;
+      color: var(--ink-soft);
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .edu-desc { line-height: 1.5; }
+    .edu-desc strong { font-weight: 500; color: var(--ink); }
+    .edu-desc span { color: var(--ink-soft); font-size: 0.82rem; }
+
+    /* ─── SECTION HEADINGS ─── */
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.01em;
+    }
+    .section-sub {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin-bottom: 2rem;
+      font-style: italic;
+      font-family: var(--font-serif);
+    }
+
+    /* ─── RESEARCH ─── */
+    .research-item {
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--sage-light);
+    }
+    .research-item:last-child { border-bottom: 1px solid var(--sage-light); }
+    .research-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+      font-style: italic;
+    }
+    .research-meta {
+      font-size: 0.78rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .research-desc {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      max-width: 56ch;
+    }
+
+    /* ─── BOOK CLUB ─── */
+    .bookclub-intro {
+      font-size: 0.96rem;
+      color: var(--ink-mid);
+      max-width: 58ch;
+      margin-bottom: 2rem;
+    }
+    .bookclub-stat-row {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .bookclub-stat {
+      text-align: center;
+    }
+    .bookclub-stat .num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--sage);
+      display: block;
+      line-height: 1;
+    }
+    .bookclub-stat .lbl {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .sessions-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .sessions-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+    }
+    .sessions-table th {
+      text-align: left;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      padding: 0.4rem 0.6rem 0.4rem 0;
+      border-bottom: 2px solid var(--sage-light);
+      font-weight: 500;
+    }
+    .sessions-table td {
+      padding: 0.55rem 0.6rem 0.55rem 0;
+      border-bottom: 1px solid var(--sage-pale);
+      color: var(--ink-mid);
+      vertical-align: top;
+    }
+    .sessions-table tr:hover td { background: var(--sage-pale); }
+    .sessions-table .session-num {
+      color: var(--ink-soft);
+      font-size: 0.75rem;
+      width: 36px;
+    }
+    .sessions-table .text-title { font-style: italic; }
+    .badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.45rem;
+      border-radius: 20px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .badge-story  { background: #e8f0e8; color: #4a6b4c; }
+    .badge-novel  { background: #f0e8d4; color: #7a5c2a; }
+    .badge-novella{ background: #e8eef4; color: #3a5878; }
+    .badge-nonfic { background: #f4e8f0; color: #7a3a6b; }
+    .badge-poetry { background: #fdf0d8; color: #8a6020; }
+    .badge-misc   { background: #efefef; color: #5a5a5a; }
+
+    /* ─── CONTACT ─── */
+    .contact-intro {
+      font-size: 0.96rem;
+      color: var(--ink-mid);
+      max-width: 50ch;
+      margin-bottom: 2rem;
+    }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      transition: color 0.2s;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--sage-light);
+    }
+    .contact-link:hover { color: var(--ink); }
+    .contact-link .icon {
+      width: 18px;
+      height: 18px;
+      color: var(--sage);
+      flex-shrink: 0;
+    }
+    .contact-link .cl-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      min-width: 80px;
+    }
+
+    /* ─── MOBILE ─── */
+    .mobile-header {
+      display: none;
+    }
+
+    @media (max-width: 720px) {
+      :root { --nav-w: 0px; }
+
+      .sidebar { display: none; }
+
+      .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 1.5rem;
+        border-bottom: 1px solid var(--sage-light);
+        position: sticky;
+        top: 0;
+        background: var(--ivory);
+        z-index: 200;
+      }
+      .mobile-header-name {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .mobile-nav-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--ink);
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .mobile-nav {
+        display: none;
+        background: var(--ivory);
+        border-bottom: 1px solid var(--sage-light);
+        padding: 1rem 1.5rem 1.5rem;
+      }
+      .mobile-nav.open { display: block; }
+      .mobile-nav a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        color: var(--ink-mid);
+        border-bottom: 1px solid var(--sage-pale);
+      }
+
+      main {
+        margin-left: 0;
+        padding: 0 1.5rem 4rem;
+      }
+      .about-photo-wrap {
+        float: none;
+        margin: 0 0 1.5rem 0;
+        width: 130px;
+      }
+      .bookclub-stat-row { flex-wrap: wrap; gap: 1rem; }
+    }
+
+    /* ─── REDUCED MOTION ─── */
+    @media (prefers-reduced-motion: reduce) {
+      #web-canvas { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Signature element: animated web of living literature -->
+<canvas id="web-canvas" aria-hidden="true"></canvas>
+
+<!-- Mobile header -->
+<header class="mobile-header">
+  <span class="mobile-header-name">Tara Maria Fernandes</span>
+  <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation">Menu</button>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#research" onclick="closeMobileNav()">Research</a>
+  <a href="#bookclub" onclick="closeMobileNav()">Book Club</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</nav>
+
+<div class="site-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" aria-label="Site navigation">
+    <div>
+      <div class="sidebar-name">Tara Maria<br>Fernandes</div>
+      <div class="sidebar-title">PhD · TC Columbia</div>
+      <nav>
+        <ul class="sidebar-nav" id="sidebar-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#bookclub">Book Club</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar-bottom">
+      <a href="https://github.com/taramariafernandes" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="mailto:tara@example.com">Email ↗</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="hero-eyebrow">Welcome</div>
+      <h1 class="hero-heading">In the web of<br><em>living literature</em></h1>
+
+      <div class="about-body clearfix">
+        <div class="about-photo-wrap">
+          <!-- Replace src with your actual photo URL -->
+          <div style="width:170px;height:210px;background:var(--sage-light);border-radius:2px;display:flex;align-items:center;justify-content:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <div class="about-photo-caption">Tara Maria Fernandes</div>
+        </div>
+
+        <p>I am a researcher, educator, and community builder whose work lives at the intersection of literary education, belonging, and the question of what books do to us — and for us — when we read them together.</p>
+
+        <p>I recently completed my PhD dissertation, <em>"A Book Club in the Web of Living Literature,"</em> at Teachers College, Columbia University, where I studied how a voluntary reading community among international students at I-House becomes a space of rooting, nourishment, and shared meaning-making.</p>
+
+        <p>As a former teacher and researcher, I am interested in what it means to bring hope into English education, and in the radical possibilities of literary engagement outside the classroom.</p>
+
+        <div class="edu-block">
+          <div class="edu-label">Education</div>
+          <div class="edu-item">
+            <span class="edu-year">2026</span>
+            <div class="edu-desc">
+              <strong>PhD, Philosophy &amp; Education</strong><br>
+              <span>Teachers College, Columbia University, New York, NY</span>
+            </div>
+          </div>
+          <div class="edu-item">
+            <span class="edu-year"></span>
+            <div class="edu-desc">
+              <strong>BA, English Literature</strong><br>
+              <span>Add your undergraduate institution here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <h2 class="section-heading">Research</h2>
+      <div class="section-sub">On literature, community, and the ethics of reading</div>
+
+      <div class="research-item">
+        <div class="research-meta">PhD Dissertation · 2026</div>
+        <div class="research-title">A Book Club in the Web of Living Literature</div>
+        <div class="research-desc">A post-qualitative study of the I-House Book Club at Columbia University, examining how a voluntary literary community among international graduate students creates spaces of belonging, identity, and shared literary experience. Draws on Cixous, Booth, and post-qualitative methodologies to ask what it means to animate a geography of literary hope.</div>
+      </div>
+
+      <div class="research-item">
+        <div class="research-meta">Research Interests</div>
+        <div class="research-title">Literary Education &amp; Community</div>
+        <div class="research-desc">How do voluntary reading communities form and sustain literary life outside formal institutions? What roles do translation, migration, and multilingual identity play in how we encounter texts?</div>
+      </div>
+
+      <div class="research-item">
+        <div class="research-meta">Research Interests</div>
+        <div class="research-title">Post-Qualitative &amp; Arts-Based Methods</div>
+        <div class="research-desc">Inquiry into fragmented, embodied, and reflexive forms of research writing — and what it means for the researcher-body to be implicated in the study of literary space.</div>
+      </div>
+
+      <div class="research-item">
+        <div class="research-meta">Writing · 2019</div>
+        <div class="research-title">Of Book Clubs and Reading Projects</div>
+        <div class="research-desc">An early piece on second-hand bookstores, coffeehouse conversations, and refusing the pessimism that young people don't want to read.</div>
+      </div>
+    </section>
+
+    <!-- BOOK CLUB -->
+    <section class="section" id="bookclub">
+      <h2 class="section-heading">I-House Book Club</h2>
+      <div class="section-sub">Founded October 2023 · International House, Columbia University</div>
+
+      <p class="bookclub-intro">The I-House Book Club has been meeting since October 2023, bringing together residents and friends to read across forms, languages, and traditions. Every session ends with tea, snacks, and the question: <em>what are you taking away from today's Book Club?</em></p>
+
+      <div class="bookclub-stat-row">
+        <div class="bookclub-stat">
+          <span class="num">27</span>
+          <span class="lbl">Sessions</span>
+        </div>
+        <div class="bookclub-stat">
+          <span class="num">2.5</span>
+          <span class="lbl">Years running</span>
+        </div>
+        <div class="bookclub-stat">
+          <span class="num">30+</span>
+          <span class="lbl">Authors read</span>
+        </div>
+        <div class="bookclub-stat">
+          <span class="num">6</span>
+          <span class="lbl">Forms explored</span>
+        </div>
+      </div>
+
+      <div class="sessions-label">Full reading list</div>
+      <table class="sessions-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Text</th>
+            <th>Author</th>
+            <th>Form</th>
+          </tr>
+        </thead>
+        <tbody id="sessions-tbody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section-heading">Contact</h2>
+      <div class="section-sub">Get in touch</div>
+      <p class="contact-intro">I'm always glad to hear from fellow readers, researchers, and educators. Whether you want to talk about literary communities, book club practice, or research, please reach out.</p>
+
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:your.email@columbia.edu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          <span class="cl-label">Email</span>
+          <span>your.email@columbia.edu</span>
+        </a>
+        <a class="contact-link" href="https://github.com/taramariafernandes" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span class="cl-label">GitHub</span>
+          <span>taramariafernandes</span>
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="cl-label">LinkedIn</span>
+          <span>Add your LinkedIn URL</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+/* ─── BOOK CLUB DATA ─── */
+const sessions = [
+  { n: 1,  date: 'Oct 2023', text: 'Inaugural Meeting', author: '', form: 'misc' },
+  { n: 2,  date: 'Nov 2023', text: 'The Ones Who Walk Away from Omelas', author: 'Ursula K. Le Guin', form: 'story' },
+  { n: 3,  date: 'Dec 2023', text: 'Ghachar Gochar', author: 'Vivek Shanbhag', form: 'novella' },
+  { n: 4,  date: 'Jan 2024', text: 'A Fist or a Heart', author: 'Kristin Eiríksdóttir', form: 'novel' },
+  { n: 5,  date: 'Feb 2024', text: 'Seven Brief Lessons on Physics', author: 'Carlo Rovelli', form: 'nonfic' },
+  { n: 6,  date: 'Mar 2024', text: 'The Stranger', author: 'Albert Camus', form: 'novella' },
+  { n: 7,  date: 'Apr 2024', text: 'Sea Oak', author: 'Lydia Davis & George Saunders', form: 'story' },
+  { n: 8,  date: 'May 2024', text: 'Things Fall Apart', author: 'Chinua Achebe', form: 'novel' },
+  { n: 9,  date: 'Jun 2024', text: 'Short stories', author: 'Ted Chiang', form: 'story' },
+  { n: 10, date: 'Sep 2024', text: 'Klara and the Sun', author: 'Kazuo Ishiguro', form: 'novel' },
+  { n: 11, date: 'Oct 2024', text: 'Chronicle of a Death Foretold', author: 'Gabriel García Márquez', form: 'novella' },
+  { n: 12, date: 'Nov 2024', text: 'My Dungeon Shook; Notes of a Native Son; A Talk to Teachers', author: 'James Baldwin', form: 'misc' },
+  { n: 13, date: 'Dec 2024', text: 'The Swimmer; Cathedral', author: 'John Cheever & Raymond Carver', form: 'story' },
+  { n: 14, date: 'Jan 2025', text: 'Orbital', author: 'Samantha Harvey', form: 'novel' },
+  { n: 14, date: 'Feb 2025', text: 'The Lady with the Dog; The Death of Ivan Ilyich', author: 'Chekhov & Tolstoy', form: 'story' },
+  { n: 15, date: 'Mar 2025', text: 'Open City', author: 'Teju Cole', form: 'novel' },
+  { n: 16, date: 'Apr 2025', text: 'Poor Economics', author: 'Banerjee & Duflo', form: 'nonfic' },
+  { n: 17, date: 'May 2025', text: 'Poetry of Hope', author: 'Poetry circle', form: 'poetry' },
+  { n: 18, date: 'Jun 2025', text: 'Stone Mattress; Springtime à la Carte', author: 'Margaret Atwood & O. Henry', form: 'story' },
+  { n: 19, date: 'Jul 2025', text: 'Small Things Like These', author: 'Claire Keegan', form: 'novella' },
+  { n: 20, date: 'Aug 2025', text: 'The Liminal: Transitions, Farewells and New Beginnings', author: 'Kiran Desai', form: 'poetry' },
+  { n: 21, date: 'Sep 2025', text: 'Bartleby, the Scrivener', author: 'Herman Melville', form: 'story' },
+  { n: 22, date: 'Oct 2025', text: 'Jeeves Takes Charge; The Custody of the Pumpkin', author: 'P.G. Wodehouse', form: 'story' },
+  { n: 23, date: 'Nov 2025', text: 'The Disappeared; The Old Man in the Piazza', author: 'Salman Rushdie', form: 'story' },
+  { n: 24, date: 'Dec 2025', text: 'Words in Motion: A Writing Workshop with Sharon Ordor', author: '', form: 'misc' },
+  { n: 25, date: 'Jan 2026', text: 'Flesh', author: 'David Szalay', form: 'novel' },
+  { n: 26, date: 'Feb 2026', text: 'English', author: 'Sanaz Toossi', form: 'misc' },
+  { n: 27, date: 'Mar 2026', text: 'Wuthering Heights', author: 'Emily Brontë', form: 'novel' },
+];
+
+const badgeMap = {
+  story:   ['badge-story',  'Short Story'],
+  novel:   ['badge-novel',  'Novel'],
+  novella: ['badge-novella','Novella'],
+  nonfic:  ['badge-nonfic', 'Non-Fiction'],
+  poetry:  ['badge-poetry', 'Poetry'],
+  misc:    ['badge-misc',   'Misc'],
+};
+
+const tbody = document.getElementById('sessions-tbody');
+sessions.forEach(s => {
+  const [cls, lbl] = badgeMap[s.form] || badgeMap.misc;
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td class="session-num">${s.n}</td>
+    <td><span class="text-title">${s.text}</span><br><small style="color:var(--ink-soft);font-size:0.75rem">${s.date}</small></td>
+    <td style="font-size:0.84rem;color:var(--ink-mid)">${s.author}</td>
+    <td><span class="badge ${cls}">${lbl}</span></td>
+  `;
+  tbody.appendChild(tr);
+});
+
+/* ─── WEB CANVAS (signature animated element) ─── */
+const canvas = document.getElementById('web-canvas');
+const ctx = canvas.getContext('2d');
+let nodes = [], W, H;
+
+function resize() {
+  W = canvas.width  = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+function initNodes() {
+  nodes = [];
+  const count = Math.min(28, Math.floor(W * H / 22000));
+  for (let i = 0; i < count; i++) {
+    nodes.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      r: Math.random() * 2 + 1,
+    });
+  }
+}
+initNodes();
+
+const SAGE_HEX = '#7a9e7e';
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  // draw threads
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const dx = nodes[j].x - nodes[i].x;
+      const dy = nodes[j].y - nodes[i].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 200) {
+        ctx.beginPath();
+        ctx.moveTo(nodes[i].x, nodes[i].y);
+        ctx.lineTo(nodes[j].x, nodes[j].y);
+        ctx.strokeStyle = SAGE_HEX;
+        ctx.globalAlpha = (1 - dist / 200) * 0.5;
+        ctx.lineWidth = 0.6;
+        ctx.stroke();
+      }
+    }
+  }
+  // draw nodes
+  ctx.globalAlpha = 0.6;
+  nodes.forEach(n => {
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+    ctx.fillStyle = SAGE_HEX;
+    ctx.fill();
+  });
+  ctx.globalAlpha = 1;
+
+  // move
+  nodes.forEach(n => {
+    n.x += n.vx;
+    n.y += n.vy;
+    if (n.x < 0 || n.x > W) n.vx *= -1;
+    if (n.y < 0 || n.y > H) n.vy *= -1;
+  });
+  requestAnimationFrame(draw);
+}
+draw();
+
+/* ─── ACTIVE NAV HIGHLIGHTING ─── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('#sidebar-nav a');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+sections.forEach(s => observer.observe(s));
+
+/* ─── MOBILE NAV ─── */
+function toggleMobileNav() {
+  document.getElementById('mobile-nav').classList.toggle('open');
+}
+function closeMobileNav() {
+  document.getElementById('mobile-nav').classList.remove('open');
+}
+</script>
+</body>
+</html>
