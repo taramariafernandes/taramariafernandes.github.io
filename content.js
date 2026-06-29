@@ -18,11 +18,11 @@ const CONTENT = {
   //    separated by a comma.
   // ════════════════════════════════════════════════════════════
   bio: [
-    "I am a researcher, educator, and community builder whose work lives at the intersection of literary education, belonging, and the question of what books do to us — and for us — when we read them together.",
+    "I am a researcher, educator, and community builder, or "Teacher-Researcher-Adventurer" passionate about building communities about literature.",
 
-    "I recently completed my PhD in English Education at Teachers College, Columbia University, where my dissertation, <em>\"A Book Club in the Web of Living Literature,\"</em> studied how a voluntary reading community among international students becomes a space of rooting, nourishment, and shared meaning-making — animating what I call a geography of literary hope. My research is deeply inspired by seven years teaching in an international school in Bangalore, India, where I used book clubs, immersive reading projects, and literary field trips to bring students into the literary realm.",
+    "I recently completed my PhD in English Education at Teachers College, Columbia University, where my dissertation, <em>\"A Book Club in the Web of Living Literature,\"</em> studied how a transnational reading community among international students becomes a space of rooting, nourishment, and shared meaning-making — animating what I call a geography of literary hope. My research is deeply inspired by seven years teaching in an international school in Bangalore, India, where I used book clubs, class reading projects, and literary field trips to invite students into a world of literary magic.",
 
-    "Alongside my doctoral research, I have taught graduate courses in literature pedagogy — including the Teaching of Shakespeare — and founded the I-House Book Club at Columbia's international graduate residential community.",
+    "Alongside my doctoral research, I have taught graduate courses in literature pedagogy — including the Teaching of Shakespeare, and Foundations of Education — and founded The I-House Book Club in an international graduate residential community.",
   ],
 
 
@@ -66,7 +66,7 @@ const CONTENT = {
     {
       meta:  'PhD Dissertation · 2026',
       title: 'A Book Club in the Web of Living Literature',
-      desc:  'A post-qualitative study of the I-House Book Club at Columbia University, examining how a voluntary literary community among international graduate students creates spaces of belonging, identity, and connection — what I call the literary electric. Drawing on Hélène Cixous, Wayne Booth, Mary Oliver, and post-qualitative methodologies, the dissertation asks what it means to animate a geography of literary hope and inject hope into the landscape of English Education. Fragmented in form and embodied in method, it insists that the researcher-body is implicated in the study of literary space. Teachers College, Columbia University.',
+      desc:  'A post-qualitative study of the I-House Book Club, examining how a voluntary literary community among international graduate students creates spaces of belonging, identity, and connection — what I call the "literary electric". Drawing on Rosenblatt's transactional theory and post-qualitative methodologies, the dissertation asks what it means to animate a geography of literary hope and inject hope into the landscape of English Education. It is written in the form of interpretive narrative research inquiry, for in scenes of Book Club the meaning emerged. Teachers College, Columbia University.',
     },
     {
       meta:  'Research Interests',
@@ -74,11 +74,7 @@ const CONTENT = {
       desc:  'What does it mean to bring a community to literature? How do book clubs, immersive reading projects, and shared literary spaces foster belonging — especially for international and multilingual communities? My work weaves seven years of high school teaching in Bangalore together with doctoral research in New York.',
     },
     {
-      meta:  'Research Interests',
-      title: 'Literary Pedagogy & Post-Qualitative Methods',
-      desc:  'Inquiry into fragmented, embodied, and reflexive forms of research writing — and what it means for the researcher-body to be implicated in the study of literary space. Also includes the Teaching of Shakespeare and literature pedagogy at the graduate level.',
-    },
-    {
+      
       meta:  'Publication · <em>The English Record</em>, Spring 2023',
       title: 'Only Connecting!: Transaction and Engagement in my Literature Classroom',
       desc:  'Fernandes, T.M. <em>The English Record</em> (New York State English Council), Vol. 72, No. 1, Spring 2023.',
@@ -86,7 +82,7 @@ const CONTENT = {
     {
       meta:  'Writing · 2019',
       title: 'Of Book Clubs and Reading Projects',
-      desc:  'On second-hand bookstores, coffeehouse conversations, and refusing the pessimism that young people don\'t want to read.',
+      desc:  'On second-hand bookstores, coffeehouse conversations, and refusing to believe that young people don\'t want to read.',
     },
   ],
 
@@ -96,7 +92,7 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
 
   // The short description paragraph at the top of the section:
-  bookclubIntro: "The I-House Book Club has been meeting since October 2023, bringing together residents and friends to read across forms, languages, and traditions. Every session ends with tea, snacks, and the question: <em>what are you taking away from today's Book Club?</em>",
+  bookclubIntro: "The I-House Book Club has been meeting since October 2023, bringing together residents and reading-friends to read across forms, languages, and traditions. Rituals of the session include opening with the question - What are you bringing to Book Club today?—, hot Earl Gray tea served in a blue teapot, and finally, "What are you taking away from today's Book Club?</em>",
 
   // The four summary numbers shown at the top:
   bookclubStats: {
@@ -146,6 +142,6 @@ const CONTENT = {
     { n: 26, date: 'Jan 2026',    text: 'Flesh',                                                                    author: 'David Szalay',                  loc: '',                     form: 'novel'   },
     { n: 27, date: 'Feb 2026',    text: 'English',                                                                  author: 'Sanaz Toossi',                  loc: '',                     form: 'misc'    },
     { n: 28, date: 'Mar 2026',    text: 'Wuthering Heights',                                                        author: 'Emily Brontë',                  loc: '',                     form: 'novel'   },
-  ],
-
-};
+    { n: 29, date: '7 May 2026',    text: 'Pedro Paramo',                                                        author: 'Juan Rulfo',                  loc: 'I-House Pub',                     form: 'novella'   },
+    { n: 30, date: '17 Jun 2026',    text: 'Strangers: A Memoir of Marriage',                                                        author: 'Belle Burden',                  loc: 'Abby O'Neill Garden',                     form: 'memoir'   },
+    { n: 31, date: '23 July 2026',    text: 'The Odyssey',                                                        author: 'Homer, translated by Emily Wilson',                  loc: 'Abby O'Neill Garden',                     form: 'epic'   },
