@@ -320,6 +320,20 @@
       color: var(--ink-soft);
     }
 
+    .bookclub-gallery {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .bookclub-gallery img {
+      width: calc(33.333% - 0.85rem);
+      min-width: 220px;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border: 1px solid var(--sage-pale);
+    }
+
     .sessions-label {
       font-size: 0.72rem;
       letter-spacing: 0.1em;
@@ -565,6 +579,13 @@
       <div class="section-sub">Founded October 2023 · International House, Columbia University</div>
       <p class="bookclub-intro" id="bookclub-intro"></p>
       <div class="bookclub-stat-row" id="bookclub-stats"></div>
+
+      <div class="bookclub-gallery">
+        <img src="bookclub-canon-p2.jpg" alt="Curating the Book Club Canon, page 2" />
+        <img src="bookclub-canon-p3.jpg" alt="Curating the Book Club Canon, page 3" />
+        <img src="bookclub-canon-p4.jpg" alt="Curating the Book Club Canon, page 4" />
+      </div>
+
       <div class="sessions-label">Full reading list</div>
       <table class="sessions-table">
         <thead>
