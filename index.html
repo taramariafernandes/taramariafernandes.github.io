@@ -184,6 +184,15 @@
       margin-top: 0.4rem;
       letter-spacing: 0.03em;
     }
+    .bio-subheading {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      font-weight: 500;
+      margin-top: 1.5rem !important;
+      margin-bottom: 0.25rem !important;
+    }
     .about-body p {
       font-size: 0.96rem;
       color: var(--ink-mid);
@@ -664,7 +673,7 @@ const badgeMap = {
 
 /* ── Bio paragraphs ── */
 document.getElementById('bio-paragraphs').innerHTML =
-  CONTENT.bio.map(p => `<p>${p}</p>`).join('');
+  CONTENT.bio.map((p, i) => (i === 1 ? `<p class="bio-subheading">A short biographical note</p>` : '') + `<p>${p}</p>`).join('');
 
 /* ── Education ── */
 const eduEl = document.getElementById('edu-block-education');
