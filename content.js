@@ -20,9 +20,9 @@ const CONTENT = {
   bio: [
     "I am a researcher, educator, and community builder whose work lives at the intersection of literary education, belonging, and the question of what books do to us — and for us — when we read them together.",
 
-    "I recently completed my PhD in English Education at Teachers College, Columbia University, where my dissertation, <em>\"A Book Club in the Web of Living Literature,\"</em> studied how a voluntary reading community among international students becomes a space of rooting, nourishment, and shared meaning-making — animating what I call a geography of literary hope. My research is deeply inspired by seven years teaching in an international school in Bangalore, India, where I used book clubs, immersive reading projects, and literary field trips to bring students into the literary realm.",
+    "Dr. Tara Maria Fernandes holds a PhD in English Education from Teachers College, Columbia University, where her dissertation, <em>A Book Club in the Web of Living Literature</em>, grew out of the transnational reading community she founded in New York. Now, she is carrying that work beyond the dissertation and into the world, devoted to building strong communities around literature wherever she can.",
 
-    "Alongside my doctoral research, I have taught graduate courses in literature pedagogy — including the Teaching of Shakespeare — and founded the I-House Book Club at Columbia's international graduate residential community.",
+    "Alongside her doctoral research, she has taught graduate courses in literature pedagogy — including the Teaching of Shakespeare — and founded the I-House Book Club at Columbia's international graduate residential community.",
   ],
 
 
