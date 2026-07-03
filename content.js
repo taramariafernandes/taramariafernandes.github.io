@@ -18,7 +18,7 @@ const CONTENT = {
   //    separated by a comma.
   // ════════════════════════════════════════════════════════════
   bio: [
-    "I call myself a Teacher-Researcher-Adventurer. My work lies in the meeting-place of literature pedagogy and community-building. I am interested in gathering people around texts and building strong communities around literature.",
+    "I call myself a Teacher-Researcher-Adventurer. My work lies at the meeting-place of literature pedagogy and community-building. I am interested in gathering people around texts and building strong communities around literature.",
 
     "Dr. Tara Maria Fernandes holds a PhD in English Education from Teachers College, Columbia University, where her dissertation, <em>A Book Club in the Web of Living Literature</em>, grew out of the transnational reading community she founded in New York. Now, she is carrying that work beyond the dissertation and into the world, devoted to building strong communities around literature wherever she can.",
 
