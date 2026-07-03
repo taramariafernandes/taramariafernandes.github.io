@@ -331,12 +331,15 @@
     .bookclub-gallery {
       display: flex;
       gap: 1.25rem;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       margin-bottom: 2.5rem;
+      align-items: flex-start;
     }
     .bookclub-gallery img {
-      width: calc(33.333% - 0.85rem);
-      min-width: 220px;
+      flex: 1 1 0;
+      width: 0;
+      height: auto;
+      object-fit: contain;
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       border: 1px solid var(--sage-pale);
