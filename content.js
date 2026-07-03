@@ -142,6 +142,3 @@ const CONTENT = {
     { n: 26, date: 'Jan 2026',    text: 'Flesh',                                                                    author: 'David Szalay',                  loc: '',                     form: 'novel'   },
     { n: 27, date: 'Feb 2026',    text: 'English',                                                                  author: 'Sanaz Toossi',                  loc: '',                     form: 'misc'    },
     { n: 28, date: 'Mar 2026',    text: 'Wuthering Heights',                                                        author: 'Emily Brontë',                  loc: '',                     form: 'novel'   },
-    { n: 29, date: '7 May 2026',    text: 'Pedro Paramo',                                                        author: 'Juan Rulfo',                  loc: 'I-House Pub',                     form: 'novella'   },
-    { n: 30, date: '17 Jun 2026',    text: 'Strangers: A Memoir of Marriage',                                                        author: 'Belle Burden',                  loc: 'Abby O'Neill Garden',                     form: 'memoir'   },
-    { n: 31, date: '23 July 2026',    text: 'The Odyssey',                                                        author: 'Homer, translated by Emily Wilson',                  loc: 'Abby O'Neill Garden',                     form: 'epic'   },
