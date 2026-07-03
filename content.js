@@ -22,7 +22,7 @@ const CONTENT = {
 
     "Dr. Tara Maria Fernandes holds a PhD in English Education from Teachers College, Columbia University, where her dissertation, <em>A Book Club in the Web of Living Literature</em>, grew out of the transnational reading community she founded in New York. Now, she is carrying that work beyond the dissertation and into the world, devoted to building strong communities around literature wherever she can.",
 
-    "Alongside her doctoral research, she has taught graduate courses in literature pedagogy — including the Teaching of Shakespeare — and founded the I-House Book Club at Columbia's international graduate residential community.",
+    "Alongside her doctoral research, she has taught graduate courses in literature pedagogy — including the Teaching of Shakespeare — and undergraduate courses in Foundations of Education, and founded The I-House Book Club in the international graduate residential community of International House.",
   ],
 
 
