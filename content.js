@@ -85,11 +85,6 @@ const CONTENT = {
       desc:  'What does it mean to bring a community to literature? How do book clubs, immersive reading projects, and shared literary spaces foster belonging — especially for international and multilingual communities? My work weaves seven years of high school teaching in Bangalore together with doctoral research in New York.',
     },
     {
-      meta:  'Research Interests',
-      title: 'Literary Pedagogy & Post-Qualitative Methods',
-      desc:  'Inquiry into fragmented, embodied, and reflexive forms of research writing — and what it means for the researcher-body to be implicated in the study of literary space. Also includes the Teaching of Shakespeare and literature pedagogy at the graduate level.',
-    },
-    {
       meta:  'Publication · <em>The English Record</em>, Spring 2023',
       title: 'Only Connecting!: Transaction and Engagement in my Literature Classroom',
       desc:  'Fernandes, T.M. <em>The English Record</em> (New York State English Council), Vol. 72, No. 1, Spring 2023.',
