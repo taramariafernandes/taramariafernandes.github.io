@@ -97,7 +97,7 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
 
   // The short description paragraph at the top of the section:
-  bookclubIntro: "The I-House Book Club has been meeting since October 2023, bringing together residents and friends to read across forms, languages, and traditions. Every session ends with tea, snacks, and the question: <em>what are you taking away from today's Book Club?</em>",
+  bookclubIntro: "The I-House Book Club has been meeting since October 2023, bringing together residents and friends to read across genres, languages, and reading traditions. I begin each session with the question <em>\"What are you bringing to Book Club today?\"</em>; break mid-way for snacks and hot Earl Gray tea (in the iconic blue teapot); and conclude with the question <em>\"What are you taking away from today's Book Club?\"</em>",
 
   // The four summary numbers shown at the top:
   bookclubStats: {
