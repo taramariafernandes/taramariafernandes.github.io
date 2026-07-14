@@ -61,12 +61,23 @@ const CONTENT = {
   //    meta  — the small label at the top (e.g. "Publication · 2023")
   //    title — the title of the piece
   //    desc  — the description paragraph
+  //  Optional fields (used by the dissertation entry):
+  //    body   — extra paragraphs shown below the description.
+  //             Add each paragraph in quotes, separated by commas.
+  //    photos — pictures shown below the text.
+  //             Fields: src (file path), alt (description for
+  //             screen readers), caption (line shown underneath)
   // ════════════════════════════════════════════════════════════
   research: [
     {
       meta:  'PhD Dissertation · 2026',
       title: 'A Book Club in the Web of Living Literature',
       desc:  'A post-qualitative study of the I-House Book Club at Columbia University, examining how a voluntary literary community among international graduate students creates spaces of belonging, identity, and connection — what I call the literary electric. Drawing on Hélène Cixous, Wayne Booth, Mary Oliver, and post-qualitative methodologies, the dissertation asks what it means to animate a geography of literary hope and inject hope into the landscape of English Education. Fragmented in form and embodied in method, it insists that the researcher-body is implicated in the study of literary space. Teachers College, Columbia University.',
+      photos: [
+        { src: 'photos/phd-defense/phd-defense-1.jpg', alt: 'Tara Maria Fernandes presenting at her final dissertation defense', caption: 'Presenting at the final dissertation defense, Teachers College, Columbia University' },
+        { src: 'photos/phd-defense/phd-defense-2.jpg', alt: 'A slide of book club photographs reading "connection, community, the literary electric"', caption: 'Connection, community — the literary electric' },
+        { src: 'photos/phd-defense/phd-defense-3.jpg', alt: 'Tara Maria Fernandes with her dissertation committee after the defense', caption: 'With my dissertation committee' },
+      ],
     },
     {
       meta:  'Research Interests',
