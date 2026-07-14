@@ -89,11 +89,6 @@ const CONTENT = {
       title: 'Only Connecting!: Transaction and Engagement in my Literature Classroom',
       desc:  'Fernandes, T.M. <em>The English Record</em> (New York State English Council), Vol. 72, No. 1, Spring 2023.',
     },
-    {
-      meta:  'Writing · 2019',
-      title: 'Of Book Clubs and Reading Projects',
-      desc:  'On second-hand bookstores, coffeehouse conversations, and refusing the pessimism that young people don\'t want to read.',
-    },
   ],
 
 
