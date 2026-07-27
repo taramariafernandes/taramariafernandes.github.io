@@ -55,6 +55,29 @@ const CONTENT = {
 
 
   // ════════════════════════════════════════════════════════════
+  //  UPCOMING EVENTS & COLLABORATIONS
+  //  To add an event: copy one block and fill in your details.
+  //  Fields:
+  //    meta  — the small label at the top (e.g. "Talk · 23 Sept 2026")
+  //    title — the name of the event
+  //    desc  — a sentence or two describing it
+  //  To remove an event after it has passed: delete its block.
+  // ════════════════════════════════════════════════════════════
+  events: [
+    {
+      meta:  'Book Club · 20 Aug 2026',
+      title: '<em>The Correspondent</em> by Virginia Evans',
+      desc:  'The I-House Book Club’s 32nd session. Thursday, 20 August, 6–8 PM · location to be announced. Ask me if you’d like a hard copy of the book.',
+    },
+    {
+      meta:  'Talk · 23 Sept 2026 · Online (METRO)',
+      title: 'Connection, Community, The Literary Electric: Building Reading Communities That Last',
+      desc:  'A METRO webinar (1–2 PM ET, on Zoom) on the practical craft of building reading communities that last: how to curate a reading list collaboratively, structure a session that invites stimulating conversation, and set the table — tea, snacks, and an opening question — so attendees become a community.',
+    },
+  ],
+
+
+  // ════════════════════════════════════════════════════════════
   //  RESEARCH
   //  To add an item: copy one block and fill in your details.
   //  Fields:

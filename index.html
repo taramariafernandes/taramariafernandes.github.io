@@ -588,6 +588,7 @@
   </header>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#events" onclick="closeMobileNav()">Upcoming Events</a>
     <a href="#research" onclick="closeMobileNav()">Research</a>
     <a href="#bookclub" onclick="closeMobileNav()">Book Club</a>
     <a href="#contact" onclick="closeMobileNav()">Contact</a>
@@ -604,6 +605,7 @@
       <nav>
         <ul class="sidebar-nav" id="sidebar-nav">
           <li><a href="#about">About</a></li>
+          <li><a href="#events">Upcoming Events</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#bookclub">Book Club</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -634,6 +636,13 @@
         <a href="CV_Tara Maria Fernandes.pdf" target="_blank" rel="noopener" class="cv-link">Curriculum Vitae ↗</a>
         <div id="edu-block-honours" class="edu-block"></div>
       </div>
+    </section>
+
+    <!-- UPCOMING EVENTS & COLLABORATIONS -->
+    <section class="section" id="events">
+      <h2 class="section-heading">Upcoming Events &amp; Collaborations</h2>
+      <div class="section-sub">Where to find me — talks, gatherings, and collaborations</div>
+      <div id="events-items"></div>
     </section>
 
     <!-- RESEARCH -->
@@ -738,6 +747,15 @@ honEl.innerHTML = '<div class="edu-label">Honours &amp; Awards</div>' +
     <div class="edu-item">
       <span class="edu-year">${h.year}</span>
       <div class="edu-desc"><strong>${h.award}</strong><br><span>${h.detail}</span></div>
+    </div>`).join('');
+
+/* ── Upcoming events & collaborations ── */
+document.getElementById('events-items').innerHTML =
+  (CONTENT.events || []).map(e => `
+    <div class="research-item">
+      <div class="research-meta">${e.meta}</div>
+      <div class="research-title">${e.title}</div>
+      <div class="research-desc">${e.desc}</div>
     </div>`).join('');
 
 /* ── Research ── */
