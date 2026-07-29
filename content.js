@@ -134,7 +134,7 @@ const CONTENT = {
 
   // The four summary numbers shown at the top:
   bookclubStats: {
-    sessions: 28,
+    sessions: 32,
     years:    '2.5+',
     authors:  '30+',
     forms:    6,
