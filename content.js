@@ -61,6 +61,9 @@ const CONTENT = {
   //    meta  — the small label at the top (e.g. "Talk · 23 Sept 2026")
   //    title — the name of the event
   //    desc  — a sentence or two describing it
+  //  Optional:
+  //    poster — a flyer/image shown beside the event.
+  //             Fields: src (file path), alt (description for screen readers)
   //  To remove an event after it has passed: delete its block.
   // ════════════════════════════════════════════════════════════
   events: [
@@ -68,6 +71,7 @@ const CONTENT = {
       meta:  'Book Club · 20 Aug 2026',
       title: '<em>The Correspondent</em> by Virginia Evans',
       desc:  'The I-House Book Club’s 32nd session. Thursday, 20 August, 6–8 PM · location to be announced. Ask me if you’d like a hard copy of the book.',
+      poster: { src: 'photos/events/august-2026-the-correspondent.jpg', alt: 'Poster for the I-House Book Club’s August 2026 session discussing The Correspondent by Virginia Evans, Thursday 20 August, 6–8 PM' },
     },
     {
       meta:  'Talk · 23 Sept 2026 · Online (METRO)',

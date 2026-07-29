@@ -327,6 +327,25 @@
       line-height: 1.5;
     }
 
+    /* ─── EVENT POSTER ─── */
+    .event-poster {
+      float: right;
+      width: 160px;
+      margin: 0.25rem 0 1rem 1.75rem;
+      display: block;
+    }
+    .event-poster img {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid var(--sage-pale);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .event-poster:hover img {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+    }
+
     /* ─── PULL QUOTE ─── */
     .pull-quote {
       border-left: 3px solid var(--gold);
@@ -559,6 +578,10 @@
         margin: 0 0 1.5rem 0;
         width: 130px;
       }
+      .event-poster {
+        width: 120px;
+        margin: 0.25rem 0 0.75rem 1rem;
+      }
       .bookclub-stat-row { flex-wrap: wrap; gap: 1rem; }
       .research-photos {
         grid-template-columns: 1fr;
@@ -752,7 +775,8 @@ honEl.innerHTML = '<div class="edu-label">Honours &amp; Awards</div>' +
 /* ── Upcoming events & collaborations ── */
 document.getElementById('events-items').innerHTML =
   (CONTENT.events || []).map(e => `
-    <div class="research-item">
+    <div class="research-item clearfix">
+      ${e.poster ? `<a class="event-poster" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
       <div class="research-meta">${e.meta}</div>
       <div class="research-title">${e.title}</div>
       <div class="research-desc">${e.desc}</div>
