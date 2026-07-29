@@ -346,6 +346,24 @@
       box-shadow: 0 8px 22px rgba(0,0,0,0.14);
     }
 
+    /* ─── EVENT LINKS ─── */
+    .event-links {
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+    .event-link {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--gold-light);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .event-link:hover { color: var(--sage); border-color: var(--sage-light); }
+
     /* ─── PULL QUOTE ─── */
     .pull-quote {
       border-left: 3px solid var(--gold);
@@ -780,6 +798,7 @@ document.getElementById('events-items').innerHTML =
       <div class="research-meta">${e.meta}</div>
       <div class="research-title">${e.title}</div>
       <div class="research-desc">${e.desc}</div>
+      ${e.links ? `<div class="event-links">${e.links.map(l => `<a class="event-link" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}</div>` : ''}
     </div>`).join('');
 
 /* ── Research ── */

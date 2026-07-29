@@ -64,6 +64,8 @@ const CONTENT = {
   //  Optional:
   //    poster — a flyer/image shown beside the event.
   //             Fields: src (file path), alt (description for screen readers)
+  //    links  — one or more buttons shown below the description.
+  //             Add each as { label: 'Text shown', url: 'https://...' }
   //  To remove an event after it has passed: delete its block.
   // ════════════════════════════════════════════════════════════
   events: [
@@ -77,6 +79,10 @@ const CONTENT = {
       meta:  'Talk · 23 Sept 2026 · Online (METRO)',
       title: 'Connection, Community, The Literary Electric: Building Reading Communities That Last',
       desc:  'A METRO webinar (1–2 PM ET, on Zoom) on the practical craft of building reading communities that last: how to curate a reading list collaboratively, structure a session that invites stimulating conversation, and set the table — tea, snacks, and an opening question — so attendees become a community.',
+      links: [
+        { label: 'Event details', url: 'https://metro.org/events/connection-community-the-literary-electric-building-reading-communities-that-last/' },
+        { label: 'Register (Zoom)', url: 'https://us02web.zoom.us/webinar/register/WN_9MDs1rq-RjW1Y3jdreq0wQ#/registration' },
+      ],
     },
   ],
 
