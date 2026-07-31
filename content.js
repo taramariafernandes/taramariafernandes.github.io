@@ -94,6 +94,23 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
   pastEvents: [
     {
+      meta:  'Interview · 30 July 2026 · Sree’s Substack',
+      title: 'Learning About <em>The Odyssey</em> — in conversation with Sree Sreenivasan',
+      desc:  'A conversation with journalist Sree Sreenivasan and his son Krishna about Homer’s <em>The Odyssey</em> — reading it through Emily Wilson’s translation and up against Christopher Nolan’s film adaptation. We talked about what the film changes, especially in how it renders the women of the poem, who are so much richer and stranger on the page.',
+      links: [
+        { label: 'Read & watch the conversation', url: 'https://sreenet.substack.com/p/learning-about-the-odyssey-w-tara' },
+      ],
+    },
+    {
+      meta:  'Book Club · 23 July 2026 · Abby O’Neill Garden, Sakura Park',
+      title: '<em>The Odyssey</em> by Homer, translated by Emily Wilson',
+      desc:  'The I-House Book Club’s 31st session. Thursday, 23 July, 6–8 PM, out in the Abby O’Neill Garden at Sakura Park.',
+      posters: [
+        { src: 'photos/events/july-2026-the-odyssey.jpg', alt: 'Poster for the I-House Book Club’s July 2026 session discussing Homer’s The Odyssey in Emily Wilson’s translation, Thursday 23 July, 6–8 PM, Abby O’Neill Garden at Sakura Park' },
+        { src: 'photos/events/july-2026-the-odyssey-gathering.jpg', alt: 'The I-House Book Club gathered in a circle on blankets in the Abby O’Neill Garden at Sakura Park, with a copy of The Odyssey held up in the foreground' },
+      ],
+    },
+    {
       meta:  'Interview · 9 March 2026 · International House',
       title: 'In Conversation with Kiran Desai',
       desc:  'In March I was invited by International House to moderate a conversation with the award-winning author — and fellow I-House alumna — Kiran Desai ’98, on her Booker-shortlisted novel <em>The Loneliness of Sonia and Sunny</em>. In the Home Room, we spoke about migration and belonging, loneliness in a globalized world, and what it means to make a home between places, languages, and shifting ideas of self. Fittingly, it began with a short story I’d stumbled upon in <em>The New Yorker</em> and rushed to share with the Book Club — a story, as Kiran put it, with “so much I-House in it.”',

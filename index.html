@@ -814,7 +814,7 @@ document.getElementById('events-items').innerHTML =
 document.getElementById('past-events-items').innerHTML =
   (CONTENT.pastEvents || []).map(e => `
     <div class="research-item clearfix">
-      ${e.poster ? `<a class="event-poster" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
+      ${(e.posters || (e.poster ? [e.poster] : [])).map(p => `<a class="event-poster" href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.alt}" loading="lazy" /></a>`).join('')}
       <div class="research-meta">${e.meta}</div>
       <div class="research-title">${e.title}</div>
       <div class="research-desc">${e.desc}</div>
