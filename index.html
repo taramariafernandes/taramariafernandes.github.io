@@ -630,6 +630,7 @@
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <a href="#about" onclick="closeMobileNav()">About</a>
     <a href="#events" onclick="closeMobileNav()">Upcoming Events</a>
+    <a href="#past-events" onclick="closeMobileNav()">Past Events</a>
     <a href="#research" onclick="closeMobileNav()">Research</a>
     <a href="#bookclub" onclick="closeMobileNav()">Book Club</a>
     <a href="#contact" onclick="closeMobileNav()">Contact</a>
@@ -647,6 +648,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
           <li><a href="#about">About</a></li>
           <li><a href="#events">Upcoming Events</a></li>
+          <li><a href="#past-events">Past Events</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#bookclub">Book Club</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -684,6 +686,13 @@
       <h2 class="section-heading">Upcoming Events &amp; Collaborations</h2>
       <div class="section-sub">Where to find me — talks, gatherings, and collaborations</div>
       <div id="events-items"></div>
+    </section>
+
+    <!-- PAST EVENTS -->
+    <section class="section" id="past-events">
+      <h2 class="section-heading">Past Events</h2>
+      <div class="section-sub">Conversations, talks, and gatherings from the archive</div>
+      <div id="past-events-items"></div>
     </section>
 
     <!-- RESEARCH -->
@@ -793,6 +802,17 @@ honEl.innerHTML = '<div class="edu-label">Honours &amp; Awards</div>' +
 /* ── Upcoming events & collaborations ── */
 document.getElementById('events-items').innerHTML =
   (CONTENT.events || []).map(e => `
+    <div class="research-item clearfix">
+      ${e.poster ? `<a class="event-poster" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
+      <div class="research-meta">${e.meta}</div>
+      <div class="research-title">${e.title}</div>
+      <div class="research-desc">${e.desc}</div>
+      ${e.links ? `<div class="event-links">${e.links.map(l => `<a class="event-link" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}</div>` : ''}
+    </div>`).join('');
+
+/* ── Past events ── */
+document.getElementById('past-events-items').innerHTML =
+  (CONTENT.pastEvents || []).map(e => `
     <div class="research-item clearfix">
       ${e.poster ? `<a class="event-poster" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
       <div class="research-meta">${e.meta}</div>

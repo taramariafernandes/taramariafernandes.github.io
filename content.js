@@ -88,6 +88,24 @@ const CONTENT = {
 
 
   // ════════════════════════════════════════════════════════════
+  //  PAST EVENTS
+  //  Same shape as the events above (meta, title, desc, and the
+  //  optional poster + links). List the most recent first.
+  // ════════════════════════════════════════════════════════════
+  pastEvents: [
+    {
+      meta:  'Interview · 9 March 2026 · International House',
+      title: 'In Conversation with Kiran Desai',
+      desc:  'In March I was invited by International House to moderate a conversation with the award-winning author — and fellow I-House alumna — Kiran Desai ’98, on her Booker-shortlisted novel <em>The Loneliness of Sonia and Sunny</em>. In the Home Room, we spoke about migration and belonging, loneliness in a globalized world, and what it means to make a home between places, languages, and shifting ideas of self. Fittingly, it began with a short story I’d stumbled upon in <em>The New Yorker</em> and rushed to share with the Book Club — a story, as Kiran put it, with “so much I-House in it.”',
+      poster: { src: 'photos/events/kiran-desai-conversation-mar-2026.jpg', alt: 'Tara Maria Fernandes moderating a conversation with author Kiran Desai in the Home Room at International House, March 2026' },
+      links: [
+        { label: 'Read the I-House write-up', url: 'https://www.ihouse-nyc.org/kiran-desai/' },
+      ],
+    },
+  ],
+
+
+  // ════════════════════════════════════════════════════════════
   //  RESEARCH
   //  To add an item: copy one block and fill in your details.
   //  Fields:
