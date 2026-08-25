@@ -179,7 +179,7 @@ const CONTENT = {
 
   // The four summary numbers shown at the top:
   bookclubStats: {
-    sessions: 32,
+    sessions: 33,
     years:    '2.5+',
     authors:  '30+',
     forms:    6,
@@ -228,7 +228,8 @@ const CONTENT = {
     { n: 29, date: '7 May 2026',  text: 'Pedro Páramo',                                                              author: 'Juan Rulfo',                    loc: 'I-House Pub',          form: 'novella' },
     { n: 30, date: '17 Jun 2026', text: 'Strangers: A Memoir of Marriage',                                          author: 'Belle Burden',                  loc: "Abby O'Neill Garden",  form: 'memoir'  },
     { n: 31, date: '23 Jul 2026', text: 'The Odyssey',                                                              author: 'Homer, translated by Emily Wilson', loc: "Abby O'Neill Garden", form: 'epic'    },
-    { n: 32, date: '20 Aug 2026', text: 'The Correspondent',                                                        author: 'Virginia Evans',                loc: 'TBA',                  form: 'novel'   },
+    { n: 32, date: '20 Aug 2026', text: 'The Correspondent',                                                        author: 'Virginia Evans',                loc: '113th Street',         form: 'novel'   },
+    { n: 33, date: '16 Sep 2026', text: 'The Year of Magical Thinking',                                              author: 'Joan Didion',                   loc: "Renata's Apt",         form: 'memoir'  },
   ],
 
 };
