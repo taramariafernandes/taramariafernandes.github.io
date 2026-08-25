@@ -92,6 +92,7 @@ const CONTENT = {
       title: '<em>The Correspondent</em> by Virginia Evans',
       desc:  'The I-House Book Club’s 32nd session. Thursday, 20 August, 6–8 PM, at my apartment on 113th Street.',
       posters: [
+        { src: 'photos/events/august-2026-the-correspondent.jpg', alt: 'Poster for the I-House Book Club’s August 2026 session discussing The Correspondent by Virginia Evans, Thursday 20 August, 6–8 PM' },
         { src: 'photos/events/august-2026-gathering.jpg', alt: 'The I-House Book Club gathered around the table at my apartment on 113th Street for the August 2026 session on The Correspondent, mid-conversation' },
         { src: 'photos/events/august-2026-letter-writing.jpg', alt: 'A still life of letter-writing materials — cards, a fountain pen, and stamps — laid out for the August 2026 Book Club session on the epistolary novel The Correspondent' },
       ],
