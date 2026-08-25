@@ -70,12 +70,6 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
   events: [
     {
-      meta:  'Book Club · 20 Aug 2026',
-      title: '<em>The Correspondent</em> by Virginia Evans',
-      desc:  'The I-House Book Club’s 32nd session. Thursday, 20 August, 6–8 PM · location to be announced. Ask me if you’d like a hard copy of the book.',
-      poster: { src: 'photos/events/august-2026-the-correspondent.jpg', alt: 'Poster for the I-House Book Club’s August 2026 session discussing The Correspondent by Virginia Evans, Thursday 20 August, 6–8 PM' },
-    },
-    {
       meta:  'Talk · 23 Sept 2026 · Online (METRO)',
       title: 'Connection, Community, The Literary Electric: Building Reading Communities That Last',
       desc:  'A METRO webinar (1–2 PM ET, on Zoom) on the practical craft of building reading communities that last: how to curate a reading list collaboratively, structure a session that invites stimulating conversation, and set the table — tea, snacks, and an opening question — so attendees become a community.',
@@ -93,6 +87,15 @@ const CONTENT = {
   //  optional poster + links). List the most recent first.
   // ════════════════════════════════════════════════════════════
   pastEvents: [
+    {
+      meta:  'Book Club · 20 Aug 2026 · 113th Street',
+      title: '<em>The Correspondent</em> by Virginia Evans',
+      desc:  'The I-House Book Club’s 32nd session. Thursday, 20 August, 6–8 PM, at my apartment on 113th Street.',
+      posters: [
+        { src: 'photos/events/august-2026-gathering.jpg', alt: 'The I-House Book Club gathered around the table at my apartment on 113th Street for the August 2026 session on The Correspondent, mid-conversation' },
+        { src: 'photos/events/august-2026-letter-writing.jpg', alt: 'A still life of letter-writing materials — cards, a fountain pen, and stamps — laid out for the August 2026 Book Club session on the epistolary novel The Correspondent' },
+      ],
+    },
     {
       meta:  'Interview · 30 July 2026 · Sree’s Substack',
       title: 'Learning About <em>The Odyssey</em> — in conversation with Sree Sreenivasan',
