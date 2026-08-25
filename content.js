@@ -72,7 +72,7 @@ const CONTENT = {
     {
       meta:  'Book Club · 16 Sept 2026 · Renata’s Apt',
       title: '<em>The Year of Magical Thinking</em> by Joan Didion',
-      desc:  'The I-House Book Club’s 33rd session. Wednesday, 16 September, 6–8 PM, at Renata’s apartment (opposite The Expat). Ask me if you’d like a hard copy of the book.',
+      desc:  'Our Book Club’s 33rd session. Wednesday, 16 September, 6–8 PM, at Renata’s apartment (opposite The Expat). Ask me if you’d like a hard copy of the book.',
       poster: { src: 'photos/events/september-2026-year-of-magical-thinking.jpg', alt: 'Poster for the I-House Book Club’s September 2026 session discussing The Year of Magical Thinking by Joan Didion, Wednesday 16 September, 6–8 PM, at Renata’s apartment' },
     },
     {
@@ -96,7 +96,7 @@ const CONTENT = {
     {
       meta:  'Book Club · 20 Aug 2026 · 113th Street',
       title: '<em>The Correspondent</em> by Virginia Evans',
-      desc:  'The I-House Book Club’s 32nd session. Thursday, 20 August, 6–8 PM, at my apartment on 113th Street.',
+      desc:  'Our Book Club’s 32nd session. Thursday, 20 August, 6–8 PM, at my apartment on 113th Street.',
       posters: [
         { src: 'photos/events/august-2026-the-correspondent.jpg', alt: 'Poster for the I-House Book Club’s August 2026 session discussing The Correspondent by Virginia Evans, Thursday 20 August, 6–8 PM' },
         { src: 'photos/events/august-2026-gathering.jpg', alt: 'The I-House Book Club gathered around the table at my apartment on 113th Street for the August 2026 session on The Correspondent, mid-conversation' },
