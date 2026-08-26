@@ -84,6 +84,15 @@ const CONTENT = {
         { label: 'Register (Zoom)', url: 'https://us02web.zoom.us/webinar/register/WN_9MDs1rq-RjW1Y3jdreq0wQ#/registration' },
       ],
     },
+    {
+      meta:  'Reading Group · 30 Sept–28 Oct 2026 · The Center for Fiction',
+      title: 'Writing from South India',
+      desc:  'A four-session reading group I’m leading at The Center for Fiction, in person. We’ll read Arundhati Roy’s memoir <em>Mother Mary Comes to Me</em> and two stories from Banu Mushtaq’s <em>Heart Lamp</em> — winner of the 2025 International Booker Prize, translated from Kannada by Deepa Bhasthi — voices rooted in place and community from South India.',
+      poster: { src: 'photos/events/sept-oct-2026-writing-from-south-india.jpg', alt: 'Poster for "Writing from South India," a reading group led by Tara Maria Fernandes at The Center for Fiction, September 30 to October 28, 2026, featuring Mother Mary Comes to Me by Arundhati Roy and Heart Lamp by Banu Mushtaq' },
+      links: [
+        { label: 'Register at centerforfiction.org', url: 'https://centerforfiction.org' },
+      ],
+    },
   ],
 
 
