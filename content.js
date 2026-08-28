@@ -103,6 +103,15 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
   pastEvents: [
     {
+      meta:  'Small Reading Group · 27 Aug 2026 · The Hungarian Pastry Shop',
+      title: '<em>Motherland</em> by Julia Ioffe',
+      desc:  'Our very first Small Reading Group — an intimate offshoot of the Book Club, gathered over coffee at the Hungarian Pastry Shop to discuss Julia Ioffe’s <em>Motherland: A Feminist History of Modern Russia, from Revolution to Autocracy</em>. A smaller table makes room for a closer, more personal conversation — with gratitude to Buna for gathering us around this book.',
+      posters: [
+        { src: 'photos/events/august-2026-motherland.jpg', alt: 'Poster for the Book Club’s first Small Reading Group, discussing Motherland by Julia Ioffe, Thursday 27 August 2026, 6–7:30 PM, at The Hungarian Pastry Shop' },
+        { src: 'photos/events/august-2026-motherland-gathering.jpg', alt: 'Three readers seated together at The Hungarian Pastry Shop, holding copies of Motherland by Julia Ioffe over coffee, at the Book Club’s first Small Reading Group' },
+      ],
+    },
+    {
       meta:  'Book Club · 20 Aug 2026 · 113th Street',
       title: '<em>The Correspondent</em> by Virginia Evans',
       desc:  'Our Book Club’s 32nd session. Thursday, 20 August, 6–8 PM, at my apartment on 113th Street.',
@@ -238,6 +247,7 @@ const CONTENT = {
     { n: 30, date: '17 Jun 2026', text: 'Strangers: A Memoir of Marriage',                                          author: 'Belle Burden',                  loc: "Abby O'Neill Garden",  form: 'memoir'  },
     { n: 31, date: '23 Jul 2026', text: 'The Odyssey',                                                              author: 'Homer, translated by Emily Wilson', loc: "Abby O'Neill Garden", form: 'epic'    },
     { n: 32, date: '20 Aug 2026', text: 'The Correspondent',                                                        author: 'Virginia Evans',                loc: "Tara's Apt (113th St)",form: 'novel'   },
+    { n: '—', date: '27 Aug 2026', text: 'Motherland',                                                              author: 'Julia Ioffe',                   loc: 'The Hungarian Pastry Shop', form: 'nonfic', note: 'Small Reading Group' },
     { n: 33, date: '16 Sep 2026', text: 'The Year of Magical Thinking',                                              author: 'Joan Didion',                   loc: "Renata's Apt",         form: 'memoir'  },
   ],
 

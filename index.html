@@ -466,6 +466,19 @@
       width: 36px;
     }
     .sessions-table .text-title { font-style: italic; }
+    .sessions-table .session-note {
+      display: inline-block;
+      font-size: 0.58rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--sage);
+      background: var(--sage-pale);
+      padding: 0.1rem 0.4rem;
+      border-radius: 20px;
+      vertical-align: middle;
+      margin-left: 0.15rem;
+    }
     @media (max-width: 720px) { .loc-col { display: none; } .loc-cell { display: none; } }
     .badge {
       display: inline-block;
@@ -852,7 +865,7 @@ CONTENT.sessions.forEach(s => {
   const tr = document.createElement('tr');
   tr.innerHTML = `
     <td class="session-num">${s.n}</td>
-    <td><span class="text-title">${s.text}</span><br><small style="color:var(--ink-soft);font-size:0.75rem">${s.date}</small></td>
+    <td><span class="text-title">${s.text}</span>${s.note ? ` <span class="session-note">${s.note}</span>` : ''}<br><small style="color:var(--ink-soft);font-size:0.75rem">${s.date}</small></td>
     <td style="font-size:0.84rem;color:var(--ink-mid)">${s.author}</td>
     <td class="loc-cell" style="font-size:0.8rem;color:var(--ink-soft)">${s.loc}</td>
     <td><span class="badge ${cls}">${lbl}</span></td>
