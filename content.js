@@ -74,6 +74,7 @@ const CONTENT = {
       meta:  'Talk · 23 Sept 2026 · Online (METRO)',
       title: 'Connection, Community, The Literary Electric: Building Reading Communities That Last',
       desc:  'A METRO webinar (1–2 PM ET, on Zoom) on the practical craft of building reading communities that last: how to curate a reading list collaboratively, structure a session that invites stimulating conversation, and set the table — tea, snacks, and an opening question — so attendees become a community.',
+      poster: { src: 'photos/events/september-2026-metro-talk.jpg', alt: 'Screenshot of the Metropolitan New York Library Council event page for the webinar “Connection, Community, The Literary Electric: Building Reading Communities That Last,” September 23, 2026, 1–2 PM ET, online' },
       links: [
         { label: 'Event details', url: 'https://metro.org/events/connection-community-the-literary-electric-building-reading-communities-that-last/' },
         { label: 'Register (Zoom)', url: 'https://us02web.zoom.us/webinar/register/WN_9MDs1rq-RjW1Y3jdreq0wQ#/registration' },
