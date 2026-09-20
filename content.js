@@ -46,7 +46,8 @@ const CONTENT = {
   //  Fields: year, award, detail (the smaller line beneath)
   // ════════════════════════════════════════════════════════════
   honours: [
-    { year: '2023–25', award: 'PEO International Peace Scholar',             detail: '2023–24 & 2024–25' },
+    { year: '2025',    award: 'Gail and Garland Keithly Educational Scholarship', detail: 'GGK Educational Scholarship Fund, in support of doctoral research in English Education' },
+    { year: '2023–25', award: 'PEO International Peace Scholar',            detail: '2023–24 & 2024–25' },
     { year: '2024',    award: 'Best Educational Enterprise Award',            detail: 'International House NYC, for the I-House Book Club' },
     { year: '2023–24', award: 'Morse Fellow',                                 detail: 'Center for Professional Education of Teachers (CPET), TC Columbia' },
     { year: '2023–25', award: 'International House NYC Program Fellow',       detail: '2023–24 & 2024–25' },
