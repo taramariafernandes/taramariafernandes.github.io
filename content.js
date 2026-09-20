@@ -70,12 +70,6 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
   events: [
     {
-      meta:  'Book Club · 16 Sept 2026 · Renata’s Apt',
-      title: '<em>The Year of Magical Thinking</em> by Joan Didion',
-      desc:  'Our Book Club’s 33rd session. Wednesday, 16 September, 6–8 PM, at Renata’s apartment (opposite The Expat). Ask me if you’d like a hard copy of the book.',
-      poster: { src: 'photos/events/september-2026-year-of-magical-thinking.jpg', alt: 'Poster for the I-House Book Club’s September 2026 session discussing The Year of Magical Thinking by Joan Didion, Wednesday 16 September, 6–8 PM, at Renata’s apartment' },
-    },
-    {
       meta:  'Talk · 23 Sept 2026 · Online (METRO)',
       title: 'Connection, Community, The Literary Electric: Building Reading Communities That Last',
       desc:  'A METRO webinar (1–2 PM ET, on Zoom) on the practical craft of building reading communities that last: how to curate a reading list collaboratively, structure a session that invites stimulating conversation, and set the table — tea, snacks, and an opening question — so attendees become a community.',
@@ -100,8 +94,21 @@ const CONTENT = {
   //  PAST EVENTS
   //  Same shape as the events above (meta, title, desc, and the
   //  optional poster + links). List the most recent first.
+  //  Extra option here: photos — a row of pictures shown below the
+  //  text. Each is { src, alt } (caption is optional).
   // ════════════════════════════════════════════════════════════
   pastEvents: [
+    {
+      meta:  'Book Club · 16 Sept 2026 · Renata’s Apt',
+      title: '<em>The Year of Magical Thinking</em> by Joan Didion',
+      desc:  'Our Book Club’s 33rd session. Wednesday, 16 September, 6–8 PM, at Renata’s apartment (opposite The Expat).',
+      poster: { src: 'photos/events/september-2026-year-of-magical-thinking.jpg', alt: 'Poster for the Book Club’s September 2026 session discussing The Year of Magical Thinking by Joan Didion, Wednesday 16 September, 6–8 PM, at Renata’s apartment' },
+      photos: [
+        { src: 'photos/events/september-2026-didion-gathering-1.jpg', alt: 'Book Club members seated together in Renata’s living room, listening to the discussion of The Year of Magical Thinking, with notebooks and books in their laps' },
+        { src: 'photos/events/september-2026-didion-gathering-2.jpg', alt: 'The Book Club gathered around Renata’s living room for the September 2026 session, mid-conversation' },
+        { src: 'photos/events/september-2026-didion-library-copies.jpg', alt: 'Two library copies of The Year of Magical Thinking held up at a library return bin' },
+      ],
+    },
     {
       meta:  'Small Reading Group · 27 Aug 2026 · The Hungarian Pastry Shop',
       title: '<em>Motherland</em> by Julia Ioffe',

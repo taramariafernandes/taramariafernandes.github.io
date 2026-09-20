@@ -346,6 +346,8 @@
       box-shadow: 0 8px 22px rgba(0,0,0,0.14);
     }
 
+    .event-photos { clear: both; }
+
     /* ─── EVENT LINKS ─── */
     .event-links {
       margin-top: 0.75rem;
@@ -832,6 +834,11 @@ document.getElementById('past-events-items').innerHTML =
       <div class="research-title">${e.title}</div>
       <div class="research-desc">${e.desc}</div>
       ${e.links ? `<div class="event-links">${e.links.map(l => `<a class="event-link" href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`).join('')}</div>` : ''}
+      ${e.photos ? `<div class="research-photos event-photos">${e.photos.map(p => `
+        <figure>
+          <a href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.alt}" loading="lazy" /></a>
+          ${p.caption ? `<figcaption>${p.caption}</figcaption>` : ''}
+        </figure>`).join('')}</div>` : ''}
     </div>`).join('');
 
 /* ── Research ── */
