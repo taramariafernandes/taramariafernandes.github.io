@@ -43,10 +43,10 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
   //  HONOURS & AWARDS
   //  To add an award: copy one block and fill in your details.
-  //  Fields: year, award, detail (the smaller line beneath)
+  //  Fields: year, award, detail (the smaller line beneath; optional)
   // ════════════════════════════════════════════════════════════
   honours: [
-    { year: '2025–26', award: 'The Gail and Garland Keithly (GGK) Educational Scholarship Award', detail: '2025 & 2026' },
+    { year: '2025–26', award: 'The Gail and Garland Keithly (GGK) Educational Scholarship Award' },
     { year: '2023–25', award: 'PEO International Peace Scholar',            detail: '2023–24 & 2024–25' },
     { year: '2024',    award: 'Best Educational Enterprise Award',            detail: 'International House NYC, for the I-House Book Club' },
     { year: '2023–24', award: 'Morse Fellow',                                 detail: 'Center for Professional Education of Teachers (CPET), TC Columbia' },

@@ -813,7 +813,7 @@ honEl.innerHTML = '<div class="edu-label">Honours &amp; Awards</div>' +
   CONTENT.honours.map(h => `
     <div class="edu-item">
       <span class="edu-year">${h.year}</span>
-      <div class="edu-desc"><strong>${h.award}</strong><br><span>${h.detail}</span></div>
+      <div class="edu-desc"><strong>${h.award}</strong>${h.detail ? `<br><span>${h.detail}</span>` : ''}</div>
     </div>`).join('');
 
 /* ── Upcoming events & collaborations ── */
