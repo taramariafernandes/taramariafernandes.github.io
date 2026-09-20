@@ -221,12 +221,13 @@ const CONTENT = {
   //  To add a new session: copy the last line and update it.
   //
   //  Fields:
-  //    n      — session number
+  //    n      — session number ('—' for workshops and small reading groups, which aren't numbered)
   //    date   — date of the session  (e.g. '15 Apr 2026')
   //    text   — title of the book / piece
   //    author — author name(s)
   //    loc    — location  (e.g. 'Dodge Room', 'Sakura Park')
   //    form   — one of: 'novel' | 'novella' | 'story' | 'nonfic' | 'poetry' | 'misc'
+  //    note   — optional small label next to the title (e.g. 'Workshop', 'Small Reading Group')
   // ─────────────────────────────────────────────────────────────
   sessions: [
     { n: 1,  date: '19 Oct 2023', text: 'Inaugural Meeting',                                                        author: '',                              loc: 'Dodge Room',           form: 'misc'    },
@@ -253,11 +254,11 @@ const CONTENT = {
     { n: 22, date: '18 Sep 2025', text: 'Bartleby, the Scrivener',                                                  author: 'Herman Melville',               loc: 'Sakura Park',          form: 'story'   },
     { n: 23, date: '23 Oct 2025', text: 'Jeeves Takes Charge; The Custody of the Pumpkin',                          author: 'P.G. Wodehouse',                loc: 'Dodge Room',           form: 'story'   },
     { n: 24, date: '20 Nov 2025', text: 'The Disappeared; The Old Man in the Piazza',                               author: 'Salman Rushdie',                loc: 'I-House Pub',          form: 'story'   },
-    { n: 25, date: '4 Dec 2025',  text: 'Words in Motion: A Writing Workshop with Sharon Ordor',                    author: '',                              loc: 'I-House Pub',          form: 'misc'    },
-    { n: 26, date: 'Jan 2026',    text: 'Flesh',                                                                    author: 'David Szalay',                  loc: 'I-House Pub',          form: 'novel'   },
-    { n: 27, date: 'Feb 2026',    text: 'English',                                                                  author: 'Sanaz Toossi',                  loc: 'I-House Pub',          form: 'play'    },
-    { n: 28, date: 'Mar 2026',    text: 'Wuthering Heights',                                                        author: 'Emily Brontë',                  loc: 'I-House Pub',          form: 'novel'   },
-    { n: 29, date: '7 May 2026',  text: 'Pedro Páramo',                                                              author: 'Juan Rulfo',                    loc: 'I-House Pub',          form: 'novella' },
+    { n: '—', date: '4 Dec 2025',  text: 'Words in Motion: A Writing Workshop with Sharon Ordor',                    author: '',                              loc: 'I-House Pub',          form: 'misc', note: 'Workshop' },
+    { n: 25, date: 'Jan 2026',    text: 'Flesh',                                                                    author: 'David Szalay',                  loc: 'I-House Pub',          form: 'novel'   },
+    { n: 26, date: 'Feb 2026',    text: 'English',                                                                  author: 'Sanaz Toossi',                  loc: 'I-House Pub',          form: 'play'    },
+    { n: 27, date: 'Mar 2026',    text: 'Wuthering Heights',                                                        author: 'Emily Brontë',                  loc: 'I-House Pub',          form: 'novel'   },
+    { n: 28, date: '7 May 2026',  text: 'Pedro Páramo',                                                              author: 'Juan Rulfo',                    loc: 'I-House Pub',          form: 'novella' },
     { n: 30, date: '17 Jun 2026', text: 'Strangers: A Memoir of Marriage',                                          author: 'Belle Burden',                  loc: "Abby O'Neill Garden",  form: 'memoir'  },
     { n: 31, date: '23 Jul 2026', text: 'The Odyssey',                                                              author: 'Homer, translated by Emily Wilson', loc: "Abby O'Neill Garden", form: 'epic'    },
     { n: 32, date: '20 Aug 2026', text: 'The Correspondent',                                                        author: 'Virginia Evans',                loc: "Tara's Apt (113th St)",form: 'novel'   },
