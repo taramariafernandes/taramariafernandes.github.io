@@ -15,7 +15,9 @@
       --sage:       #7a9e7e;
       --sage-light: #c8dbc9;
       --sage-pale:  #eef4ee;
-      --ivory:      #ddf5e1;
+      --ivory:      #faf6ee;
+      --forest:     #1f3d2e;
+      --forest-line:#33553f;
       --ink:        #1e2a1f;
       --ink-mid:    #3d4f3e;
       --ink-soft:   #6b7d6c;
@@ -72,8 +74,7 @@
       display: flex;
       flex-direction: column;
       padding: 3rem 2rem;
-      border-right: 1px solid var(--sage-light);
-      background: var(--ivory);
+      background: var(--forest);
       z-index: 100;
     }
 
@@ -81,14 +82,14 @@
       font-family: var(--font-display);
       font-size: 1.1rem;
       font-weight: 600;
-      color: var(--ink);
+      color: var(--ivory);
       letter-spacing: -0.01em;
       line-height: 1.3;
       margin-bottom: 0.25rem;
     }
     .sidebar-title {
       font-size: 0.72rem;
-      color: var(--ink-soft);
+      color: var(--gold-light);
       letter-spacing: 0.06em;
       text-transform: uppercase;
       margin-bottom: 2.5rem;
@@ -104,7 +105,7 @@
       display: block;
       font-size: 0.85rem;
       font-weight: 400;
-      color: var(--ink-mid);
+      color: var(--sage-light);
       padding: 0.4rem 0;
       border-left: 2px solid transparent;
       padding-left: 0.75rem;
@@ -113,7 +114,7 @@
     }
     .sidebar-nav a:hover,
     .sidebar-nav a.active {
-      color: var(--ink);
+      color: var(--white);
       border-left-color: var(--gold);
     }
 
@@ -123,11 +124,11 @@
     .sidebar-bottom a {
       display: block;
       font-size: 0.75rem;
-      color: var(--ink-soft);
+      color: var(--sage-light);
       margin-bottom: 0.4rem;
       transition: color 0.2s;
     }
-    .sidebar-bottom a:hover { color: var(--sage); }
+    .sidebar-bottom a:hover { color: var(--gold-light); }
 
     /* ─── MAIN CONTENT ─── */
     main {
@@ -560,33 +561,34 @@
         position: sticky;
         top: 0;
         z-index: 200;
-        background: var(--ivory);
+        background: var(--forest);
       }
       .mobile-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1.2rem 1.5rem;
-        border-bottom: 1px solid var(--sage-light);
+        border-bottom: 1px solid var(--forest-line);
       }
       .mobile-header-name {
         font-family: var(--font-display);
         font-size: 1rem;
         font-weight: 600;
+        color: var(--ivory);
       }
       .mobile-nav-toggle {
         background: none;
         border: none;
         cursor: pointer;
-        color: var(--ink);
+        color: var(--gold-light);
         font-size: 0.85rem;
         letter-spacing: 0.06em;
         text-transform: uppercase;
       }
       .mobile-nav {
         display: none;
-        background: var(--ivory);
-        border-bottom: 1px solid var(--sage-light);
+        background: var(--forest);
+        border-bottom: 1px solid var(--forest-line);
         padding: 1rem 1.5rem 1.5rem;
       }
       .mobile-nav.open { display: block; }
@@ -594,8 +596,8 @@
         display: block;
         padding: 0.5rem 0;
         font-size: 0.9rem;
-        color: var(--ink-mid);
-        border-bottom: 1px solid var(--sage-pale);
+        color: var(--sage-light);
+        border-bottom: 1px solid var(--forest-line);
       }
 
       main {
