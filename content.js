@@ -87,6 +87,12 @@ const CONTENT = {
         { label: 'Register at centerforfiction.org', url: 'https://centerforfiction.org/group-workshop/writing-from-south-india-deepa-bhasthi-and-arundhati-roy-with-tara-fernandes/' },
       ],
     },
+    {
+      meta:  'Book Club · 22 Oct 2026 · Nam’s Apt',
+      title: '<em>Yesteryear</em> by Caro Claire Burke',
+      desc:  'Our Book Club’s 34th session. Thursday, 22 October, 6–8 PM, at Nam’s apartment (74th Street, UWS). Ask me if you’d like a hard copy of the book.',
+      poster: { src: 'photos/events/october-2026-yesteryear.jpg', alt: 'Poster for the Book Club’s October 2026 session discussing Yesteryear by Caro Claire Burke, Thursday 22 October, 6–8 PM, at Nam’s apartment on 74th Street, Upper West Side' },
+    },
   ],
 
 
@@ -204,7 +210,7 @@ const CONTENT = {
 
   // The four summary numbers shown at the top:
   bookclubStats: {
-    sessions: 33,
+    sessions: 34,
     years:    '2.5+',
     authors:  '30+',
     forms:    6,
@@ -256,6 +262,7 @@ const CONTENT = {
     { n: 32, date: '20 Aug 2026', text: 'The Correspondent',                                                        author: 'Virginia Evans',                loc: "Tara's Apt (113th St)",form: 'novel'   },
     { n: '—', date: '27 Aug 2026', text: 'Motherland',                                                              author: 'Julia Ioffe',                   loc: 'The Hungarian Pastry Shop', form: 'nonfic', note: 'Small Reading Group' },
     { n: 33, date: '16 Sep 2026', text: 'The Year of Magical Thinking',                                              author: 'Joan Didion',                   loc: "Renata's Apt",         form: 'memoir'  },
+    { n: 34, date: '22 Oct 2026', text: 'Yesteryear',                                                               author: 'Caro Claire Burke',             loc: "Nam's Apt (74th St)",  form: 'novel'   },
   ],
 
 };
