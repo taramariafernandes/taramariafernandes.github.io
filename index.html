@@ -870,14 +870,17 @@ document.getElementById('bookclub-stats').innerHTML = `
 /* ── Sessions table ── */
 const tbody = document.getElementById('sessions-tbody');
 CONTENT.sessions.forEach(s => {
-  const [cls, lbl] = badgeMap[s.form] || badgeMap.misc;
+  const badge = s.form === 'misc' ? '' : (() => {
+    const [cls, lbl] = badgeMap[s.form] || badgeMap.misc;
+    return `<span class="badge ${cls}">${lbl}</span>`;
+  })();
   const tr = document.createElement('tr');
   tr.innerHTML = `
     <td class="session-num">${s.n}</td>
     <td><span class="text-title">${s.text}</span>${s.note ? ` <span class="session-note">${s.note}</span>` : ''}<br><small style="color:var(--ink-soft);font-size:0.75rem">${s.date}</small></td>
     <td style="font-size:0.84rem;color:var(--ink-mid)">${s.author}</td>
     <td class="loc-cell" style="font-size:0.8rem;color:var(--ink-soft)">${s.loc}</td>
-    <td><span class="badge ${cls}">${lbl}</span></td>
+    <td>${badge}</td>
   `;
   tbody.appendChild(tr);
 });
