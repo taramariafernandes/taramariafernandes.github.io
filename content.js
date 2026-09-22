@@ -104,6 +104,8 @@ const CONTENT = {
   //  optional poster + links). List the most recent first.
   //  Extra option here: photos — a row of pictures shown below the
   //  text. Each is { src, alt } (caption is optional).
+  //  A poster can also take wide: true to display larger — use it
+  //  for a landscape graphic where the normal size is hard to read.
   // ════════════════════════════════════════════════════════════
   pastEvents: [
     {
@@ -140,7 +142,7 @@ const CONTENT = {
       meta:  'Interview · 30 July 2026 · Sree’s Substack',
       title: 'Learning About <em>The Odyssey</em> — in conversation with Sree Sreenivasan',
       desc:  'A conversation with journalist Sree Sreenivasan and his son Krishna about Homer’s <em>The Odyssey</em> — reading it through Emily Wilson’s translation and up against Christopher Nolan’s film adaptation. We talked about what the film changes, especially in how it renders the women of the poem, who are so much richer and stranger on the page.',
-      poster: { src: 'photos/events/july-2026-sree-odyssey-interview.jpg', alt: 'Graphic for Sree’s Sunday Note “X Teaches Sree About Y” virtual salon series: Tara Maria Fernandes teaches Sree about Homer’s The Odyssey, Emily Wilson’s translation, and Christopher Nolan’s adaptation, with special guest Krishna Sreenivasan' },
+      poster: { src: 'photos/events/july-2026-sree-odyssey-interview.jpg', alt: 'Graphic for Sree’s Sunday Note “X Teaches Sree About Y” virtual salon series: Tara Maria Fernandes teaches Sree about Homer’s The Odyssey, Emily Wilson’s translation, and Christopher Nolan’s adaptation, with special guest Krishna Sreenivasan', wide: true },
       links: [
         { label: 'Read & watch the conversation', url: 'https://sreenet.substack.com/p/learning-about-the-odyssey-w-tara' },
       ],

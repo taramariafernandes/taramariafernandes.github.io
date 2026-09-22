@@ -346,6 +346,9 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 22px rgba(0,0,0,0.14);
     }
+    .event-poster.is-wide {
+      width: 280px;
+    }
 
     .event-photos { clear: both; }
 
@@ -617,6 +620,9 @@
         width: 120px;
         margin: 0.25rem 0 0.75rem 1rem;
       }
+      .event-poster.is-wide {
+        width: 190px;
+      }
       .bookclub-stat-row { flex-wrap: wrap; gap: 1rem; }
       .research-photos {
         grid-template-columns: 1fr;
@@ -820,7 +826,7 @@ honEl.innerHTML = '<div class="edu-label">Honours &amp; Awards</div>' +
 document.getElementById('events-items').innerHTML =
   (CONTENT.events || []).map(e => `
     <div class="research-item clearfix">
-      ${e.poster ? `<a class="event-poster" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
+      ${e.poster ? `<a class="event-poster${e.poster.wide ? ' is-wide' : ''}" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
       <div class="research-meta">${e.meta}</div>
       <div class="research-title">${e.title}</div>
       <div class="research-desc">${e.desc}</div>
@@ -831,7 +837,7 @@ document.getElementById('events-items').innerHTML =
 document.getElementById('past-events-items').innerHTML =
   (CONTENT.pastEvents || []).map(e => `
     <div class="research-item clearfix">
-      ${(e.posters || (e.poster ? [e.poster] : [])).map(p => `<a class="event-poster" href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.alt}" loading="lazy" /></a>`).join('')}
+      ${(e.posters || (e.poster ? [e.poster] : [])).map(p => `<a class="event-poster${p.wide ? ' is-wide' : ''}" href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.alt}" loading="lazy" /></a>`).join('')}
       <div class="research-meta">${e.meta}</div>
       <div class="research-title">${e.title}</div>
       <div class="research-desc">${e.desc}</div>
