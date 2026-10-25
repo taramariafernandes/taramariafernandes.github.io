@@ -71,16 +71,6 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
   events: [
     {
-      meta:  'Talk · 23 Sept 2026 · Online (METRO)',
-      title: 'Connection, Community, The Literary Electric: Building Reading Communities That Last',
-      desc:  'A METRO webinar (1–2 PM ET, on Zoom) on the practical craft of building reading communities that last: how to curate a reading list collaboratively, structure a session that invites stimulating conversation, and set the table — tea, snacks, and an opening question — so attendees become a community.',
-      poster: { src: 'photos/events/september-2026-metro-talk.jpg', alt: 'Screenshot of the Metropolitan New York Library Council event page for the webinar “Connection, Community, The Literary Electric: Building Reading Communities That Last,” September 23, 2026, 1–2 PM ET, online' },
-      links: [
-        { label: 'Event details', url: 'https://metro.org/events/connection-community-the-literary-electric-building-reading-communities-that-last/' },
-        { label: 'Register (Zoom)', url: 'https://us02web.zoom.us/webinar/register/WN_9MDs1rq-RjW1Y3jdreq0wQ#/registration' },
-      ],
-    },
-    {
       meta:  'Reading Group · 30 Sept–28 Oct 2026 · The Center for Fiction',
       title: 'Writing from South India',
       desc:  'A three-session reading group I’m leading at The Center for Fiction, in person. We’ll read Arundhati Roy’s memoir <em>Mother Mary Comes to Me</em> and two stories from Banu Mushtaq’s <em>Heart Lamp</em> — winner of the 2025 International Booker Prize, translated from Kannada by Deepa Bhasthi — voices rooted in place and community from South India.',
@@ -113,6 +103,15 @@ const CONTENT = {
       title: '<em>Yesteryear</em> by Caro Claire Burke',
       desc:  'Our Book Club’s 34th session. Thursday, 22 October, 6–8 PM, at Nam’s apartment (74th Street, UWS).',
       poster: { src: 'photos/events/october-2026-yesteryear.jpg', alt: 'Poster for the Book Club’s October 2026 session discussing Yesteryear by Caro Claire Burke, Thursday 22 October, 6–8 PM, at Nam’s apartment on 74th Street, Upper West Side' },
+    },
+    {
+      meta:  'Talk · 23 Sept 2026 · Online (METRO)',
+      title: 'Connection, Community, The Literary Electric: Building Reading Communities That Last',
+      desc:  'A METRO webinar (1–2 PM ET, on Zoom) on the practical craft of building reading communities that last: how to curate a reading list collaboratively, structure a session that invites stimulating conversation, and set the table — tea, snacks, and an opening question — so attendees become a community.',
+      poster: { src: 'photos/events/september-2026-metro-talk.jpg', alt: 'Screenshot of the Metropolitan New York Library Council event page for the webinar “Connection, Community, The Literary Electric: Building Reading Communities That Last,” September 23, 2026, 1–2 PM ET, online' },
+      links: [
+        { label: 'Event details', url: 'https://metro.org/events/connection-community-the-literary-electric-building-reading-communities-that-last/' },
+      ],
     },
     {
       meta:  'Book Club · 16 Sept 2026 · Renata’s Apt',
