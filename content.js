@@ -90,12 +90,6 @@ const CONTENT = {
       ],
     },
     {
-      meta:  'Book Club · 22 Oct 2026 · Nam’s Apt',
-      title: '<em>Yesteryear</em> by Caro Claire Burke',
-      desc:  'Our Book Club’s 34th session. Thursday, 22 October, 6–8 PM, at Nam’s apartment (74th Street, UWS). Ask me if you’d like a hard copy of the book.',
-      poster: { src: 'photos/events/october-2026-yesteryear.jpg', alt: 'Poster for the Book Club’s October 2026 session discussing Yesteryear by Caro Claire Burke, Thursday 22 October, 6–8 PM, at Nam’s apartment on 74th Street, Upper West Side' },
-    },
-    {
       meta:  'Book Club · 19 Nov 2026 · Josie & Vivien’s Apt',
       title: '<em>The Vegetarian</em> by Han Kang',
       desc:  'Our Book Club’s 35th session, on Han Kang’s novel, translated from the Korean by Deborah Smith. Thursday, 19 November, 6–8 PM, at Josie & Vivien’s apartment (113th Street, UWS). Ask me if you’d like a hard copy of the book.',
@@ -114,6 +108,12 @@ const CONTENT = {
   //  for a landscape graphic where the normal size is hard to read.
   // ════════════════════════════════════════════════════════════
   pastEvents: [
+    {
+      meta:  'Book Club · 22 Oct 2026 · Nam’s Apt',
+      title: '<em>Yesteryear</em> by Caro Claire Burke',
+      desc:  'Our Book Club’s 34th session. Thursday, 22 October, 6–8 PM, at Nam’s apartment (74th Street, UWS).',
+      poster: { src: 'photos/events/october-2026-yesteryear.jpg', alt: 'Poster for the Book Club’s October 2026 session discussing Yesteryear by Caro Claire Burke, Thursday 22 October, 6–8 PM, at Nam’s apartment on 74th Street, Upper West Side' },
+    },
     {
       meta:  'Book Club · 16 Sept 2026 · Renata’s Apt',
       title: '<em>The Year of Magical Thinking</em> by Joan Didion',
