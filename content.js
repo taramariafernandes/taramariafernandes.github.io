@@ -95,6 +95,12 @@ const CONTENT = {
       desc:  'Our Book Club’s 34th session. Thursday, 22 October, 6–8 PM, at Nam’s apartment (74th Street, UWS). Ask me if you’d like a hard copy of the book.',
       poster: { src: 'photos/events/october-2026-yesteryear.jpg', alt: 'Poster for the Book Club’s October 2026 session discussing Yesteryear by Caro Claire Burke, Thursday 22 October, 6–8 PM, at Nam’s apartment on 74th Street, Upper West Side' },
     },
+    {
+      meta:  'Book Club · 19 Nov 2026 · Josie & Vivien’s Apt',
+      title: '<em>The Vegetarian</em> by Han Kang',
+      desc:  'Our Book Club’s 35th session, on Han Kang’s novel, translated from the Korean by Deborah Smith. Thursday, 19 November, 6–8 PM, at Josie & Vivien’s apartment (113th Street, UWS). Ask me if you’d like a hard copy of the book.',
+      poster: { src: 'photos/events/november-2026-the-vegetarian.jpg', alt: 'Poster for the Book Club’s November 2026 session discussing The Vegetarian by Han Kang, translated from the Korean by Deborah Smith, Thursday 19 November, 6–8 PM, at Josie and Vivien’s apartment on 113th Street, Upper West Side' },
+    },
   ],
 
 
@@ -215,7 +221,7 @@ const CONTENT = {
 
   // The four summary numbers shown at the top:
   bookclubStats: {
-    sessions: 34,
+    sessions: 35,
     years:    '2.5+',
     authors:  '30+',
     forms:    6,
@@ -269,6 +275,7 @@ const CONTENT = {
     { n: '—', date: '27 Aug 2026', text: 'Motherland',                                                              author: 'Julia Ioffe',                   loc: 'The Hungarian Pastry Shop', form: 'nonfic', note: 'Small Reading Group' },
     { n: 33, date: '16 Sep 2026', text: 'The Year of Magical Thinking',                                              author: 'Joan Didion',                   loc: "Renata's Apt",         form: 'memoir'  },
     { n: 34, date: '22 Oct 2026', text: 'Yesteryear',                                                               author: 'Caro Claire Burke',             loc: "Nam's Apt (74th St)",  form: 'novel'   },
+    { n: 35, date: '19 Nov 2026', text: 'The Vegetarian',                                                           author: 'Han Kang, translated by Deborah Smith', loc: "Josie & Vivien's Apt (113th St)", form: 'novel'   },
   ],
 
 };
