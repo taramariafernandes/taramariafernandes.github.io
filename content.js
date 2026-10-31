@@ -71,15 +71,6 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
   events: [
     {
-      meta:  'Reading Group · 30 Sept–28 Oct 2026 · The Center for Fiction',
-      title: 'Writing from South India',
-      desc:  'A three-session reading group I’m leading at The Center for Fiction, in person. We’ll read Arundhati Roy’s memoir <em>Mother Mary Comes to Me</em> and two stories from Banu Mushtaq’s <em>Heart Lamp</em> — winner of the 2025 International Booker Prize, translated from Kannada by Deepa Bhasthi — voices rooted in place and community from South India.',
-      poster: { src: 'photos/events/sept-oct-2026-writing-from-south-india.jpg', alt: 'Poster for "Writing from South India," a reading group led by Tara Maria Fernandes at The Center for Fiction, September 30 to October 28, 2026, featuring Mother Mary Comes to Me by Arundhati Roy and Heart Lamp by Banu Mushtaq' },
-      links: [
-        { label: 'Register at centerforfiction.org', url: 'https://centerforfiction.org/group-workshop/writing-from-south-india-deepa-bhasthi-and-arundhati-roy-with-tara-fernandes/' },
-      ],
-    },
-    {
       meta:  'Book Club · 19 Nov 2026 · Josie & Vivien’s Apt',
       title: '<em>The Vegetarian</em> by Han Kang',
       desc:  'Our Book Club’s 35th session, on Han Kang’s novel, translated from the Korean by Deborah Smith. Thursday, 19 November, 6–8 PM, at Josie & Vivien’s apartment (113th Street, UWS). Ask me if you’d like a hard copy of the book.',
@@ -98,6 +89,12 @@ const CONTENT = {
   //  for a landscape graphic where the normal size is hard to read.
   // ════════════════════════════════════════════════════════════
   pastEvents: [
+    {
+      meta:  'Reading Group · 30 Sept–28 Oct 2026 · The Center for Fiction',
+      title: 'Writing from South India',
+      desc:  'A three-session reading group I led at The Center for Fiction, in person. We read Arundhati Roy’s memoir <em>Mother Mary Comes to Me</em> and two stories from Banu Mushtaq’s <em>Heart Lamp</em> — winner of the 2025 International Booker Prize, translated from Kannada by Deepa Bhasthi — voices rooted in place and community from South India.',
+      poster: { src: 'photos/events/sept-oct-2026-writing-from-south-india.jpg', alt: 'Poster for "Writing from South India," a reading group led by Tara Maria Fernandes at The Center for Fiction, September 30 to October 28, 2026, featuring Mother Mary Comes to Me by Arundhati Roy and Heart Lamp by Banu Mushtaq' },
+    },
     {
       meta:  'Book Club · 22 Oct 2026 · Nam’s Apt',
       title: '<em>Yesteryear</em> by Caro Claire Burke',
