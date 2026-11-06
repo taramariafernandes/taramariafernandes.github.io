@@ -441,6 +441,33 @@
       padding-top: 3rem;
       border-top: 1px solid var(--sage-light);
     }
+    .tbc-posters {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      max-width: 680px;
+    }
+    .tbc-posters figure { margin: 0; }
+    .tbc-posters a { display: block; }
+    .tbc-posters img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid var(--sage-pale);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .tbc-posters a:hover img {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+    }
+    .tbc-posters figcaption {
+      font-size: 0.68rem;
+      color: var(--ink-soft);
+      margin-top: 0.45rem;
+      letter-spacing: 0.03em;
+      line-height: 1.4;
+    }
     .sessions-label {
       font-size: 0.72rem;
       letter-spacing: 0.1em;
@@ -629,6 +656,7 @@
         width: 190px;
       }
       .bookclub-stat-row { flex-wrap: wrap; gap: 1rem; }
+      .tbc-posters { grid-template-columns: repeat(2, 1fr); }
       .research-photos {
         grid-template-columns: 1fr;
       }
@@ -761,7 +789,7 @@
         <h2 class="section-heading">Teacher Book Club (Mallya Aditi International School)</h2>
         <div class="section-sub">Bangalore, India · Online</div>
         <p class="bookclub-intro" id="teacher-bookclub-intro"></p>
-        <div id="teacher-bookclub-items"></div>
+        <div class="tbc-posters" id="teacher-bookclub-items"></div>
       </div>
     </section>
 
@@ -864,13 +892,11 @@ document.getElementById('past-events-items').innerHTML =
 /* ── Teacher Book Club ── */
 document.getElementById('teacher-bookclub-intro').innerHTML = CONTENT.teacherBookclub.intro;
 document.getElementById('teacher-bookclub-items').innerHTML =
-  CONTENT.teacherBookclub.sessions.map(e => `
-    <div class="research-item clearfix">
-      ${e.poster ? `<a class="event-poster" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
-      <div class="research-meta">${e.meta}</div>
-      <div class="research-title">${e.title}</div>
-      <div class="research-desc">${e.desc}</div>
-    </div>`).join('');
+  CONTENT.teacherBookclub.posters.map(p => `
+    <figure>
+      <a href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.alt}" loading="lazy" /></a>
+      <figcaption>${p.caption}</figcaption>
+    </figure>`).join('');
 
 /* ── Research ── */
 document.getElementById('research-items').innerHTML =
