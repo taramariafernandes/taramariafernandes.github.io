@@ -436,6 +436,11 @@
       border: 1px solid var(--sage-pale);
     }
 
+    .bookclub-strand {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--sage-light);
+    }
     .sessions-label {
       font-size: 0.72rem;
       letter-spacing: 0.1em;
@@ -655,7 +660,7 @@
     <a href="#events" onclick="closeMobileNav()">Upcoming Events</a>
     <a href="#past-events" onclick="closeMobileNav()">Past Events</a>
     <a href="#research" onclick="closeMobileNav()">Research</a>
-    <a href="#bookclub" onclick="closeMobileNav()">Book Club</a>
+    <a href="#bookclub" onclick="closeMobileNav()">Book Clubs</a>
     <a href="#contact" onclick="closeMobileNav()">Contact</a>
   </nav>
 </div>
@@ -673,7 +678,7 @@
           <li><a href="#events">Upcoming Events</a></li>
           <li><a href="#past-events">Past Events</a></li>
           <li><a href="#research">Research</a></li>
-          <li><a href="#bookclub">Book Club</a></li>
+          <li><a href="#bookclub">Book Clubs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -751,6 +756,13 @@
         </thead>
         <tbody id="sessions-tbody"></tbody>
       </table>
+
+      <div class="bookclub-strand" id="teacher-bookclub">
+        <h2 class="section-heading">Teacher Book Club (Mallya Aditi International School)</h2>
+        <div class="section-sub">Bangalore, India · Online</div>
+        <p class="bookclub-intro" id="teacher-bookclub-intro"></p>
+        <div id="teacher-bookclub-items"></div>
+      </div>
     </section>
 
     <!-- CONTACT -->
@@ -847,6 +859,17 @@ document.getElementById('past-events-items').innerHTML =
           <a href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.alt}" loading="lazy" /></a>
           ${p.caption ? `<figcaption>${p.caption}</figcaption>` : ''}
         </figure>`).join('')}</div>` : ''}
+    </div>`).join('');
+
+/* ── Teacher Book Club ── */
+document.getElementById('teacher-bookclub-intro').innerHTML = CONTENT.teacherBookclub.intro;
+document.getElementById('teacher-bookclub-items').innerHTML =
+  CONTENT.teacherBookclub.sessions.map(e => `
+    <div class="research-item clearfix">
+      ${e.poster ? `<a class="event-poster" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
+      <div class="research-meta">${e.meta}</div>
+      <div class="research-title">${e.title}</div>
+      <div class="research-desc">${e.desc}</div>
     </div>`).join('');
 
 /* ── Research ── */

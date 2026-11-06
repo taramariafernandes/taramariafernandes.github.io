@@ -223,6 +223,42 @@ const CONTENT = {
     forms:    6,
   },
 
+  // ════════════════════════════════════════════════════════════
+  //  TEACHER BOOK CLUB (Mallya Aditi International School)
+  //  A separate strand under "Book Clubs". Newest session first.
+  //  Fields per session: meta, title, desc, poster { src, alt }
+  //  Posters only — no photos of faces.
+  // ════════════════════════════════════════════════════════════
+  teacherBookclub: {
+    intro: "The Teacher Book Club, with my old school in Bangalore: Mallya Aditi International School. We meet online.",
+    sessions: [
+      {
+        meta:  'Session 4 · Tue 24 Nov 2026 · Google Classroom',
+        title: 'Two short stories: Margaret Atwood’s “Stone Mattress” and Roald Dahl’s “Lamb to the Slaughter”',
+        desc:  'Tuesday, 24 November, 6:00–7:30 PM, on Google Classroom.',
+        poster: { src: 'photos/teacher-book-club/session-4-nov-2026.png', alt: 'Poster for the Teacher Book Club’s fourth session, discussing two short stories: Margaret Atwood’s “Stone Mattress” and Roald Dahl’s “Lamb to the Slaughter,” Tuesday 24 November, 6:00–7:30 PM, on Google Classroom' },
+      },
+      {
+        meta:  'Session 3 · Fri 30 Oct 2026 · Google Classroom',
+        title: '<em>Yesteryear</em> by Caro Claire Burke',
+        desc:  'Friday, 30 October, 6:00–7:30 PM, on Google Classroom.',
+        poster: { src: 'photos/teacher-book-club/session-3-oct-2026.png', alt: 'Poster for the Teacher Book Club’s third session, discussing Yesteryear by Caro Claire Burke, Friday 30 October, 6:00–7:30 PM, on Google Classroom' },
+      },
+      {
+        meta:  'Session 2 · Fri 25 Sept 2026 · Google Classroom',
+        title: 'Two short stories by Banu Mushtaq: “Heart Lamp” and “Red Lungi”',
+        desc:  'Friday, 25 September, 6:00–7:30 PM, on Google Classroom.',
+        poster: { src: 'photos/teacher-book-club/session-2-sep-2026.jpg', alt: 'Poster for the Teacher Book Club’s second session, discussing two short stories by Banu Mushtaq, “Heart Lamp” and “Red Lungi,” Friday 25 September, 6:00–7:30 PM, on Google Classroom' },
+      },
+      {
+        meta:  'Session 1 · Fri 21 Aug 2026 · Zoom',
+        title: 'An introductory session',
+        desc:  'Our first session, on Zoom, 5:00–6:30 PM. Teachers did not need to prepare: I brought two “mini” short stories by Lydia Davis, and we discussed them.',
+        poster: { src: 'photos/teacher-book-club/session-1-aug-2026.png', alt: 'Invitation poster for the Teacher Book Club’s first session, Friday 21 August, 5:00–6:30 PM, on Zoom: no reading needed in advance, just grab a cup of tea and join' },
+      },
+    ],
+  },
+
   // ── READING LIST ─────────────────────────────────────────────
   //  To add a new session: copy the last line and update it.
   //
