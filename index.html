@@ -436,6 +436,11 @@
       border: 1px solid var(--sage-pale);
     }
 
+    .bookclub-strand.first {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
     .bookclub-strand {
       margin-top: 4rem;
       padding-top: 3rem;
@@ -760,36 +765,38 @@
 
     <!-- BOOK CLUB -->
     <section class="section" id="bookclub">
-      <h2 class="section-heading">I-House Book Club</h2>
-      <div class="section-sub">Founded October 2023 · International House, Columbia University</div>
-      <p class="bookclub-intro" id="bookclub-intro"></p>
-      <div class="bookclub-stat-row" id="bookclub-stats"></div>
-
-      <div class="bookclub-gallery">
-        <img src="bookclub-canon-p2.jpg" alt="Curating the Book Club Canon, page 2" />
-        <img src="bookclub-canon-p3.jpg?v=2" alt="Curating the Book Club Canon, page 3" />
-        <img src="bookclub-canon-p4.jpg" alt="Curating the Book Club Canon, page 4" />
-      </div>
-
-      <div class="sessions-label">The I-House Book Club's Reading List</div>
-      <table class="sessions-table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Text</th>
-            <th>Author</th>
-            <th class="loc-col">Location</th>
-            <th>Form</th>
-          </tr>
-        </thead>
-        <tbody id="sessions-tbody"></tbody>
-      </table>
-
-      <div class="bookclub-strand" id="teacher-bookclub">
+      <div class="bookclub-strand first" id="teacher-bookclub">
         <h2 class="section-heading">Teacher Book Club (Mallya Aditi International School)</h2>
         <div class="section-sub">Bangalore, India · Online</div>
         <p class="bookclub-intro" id="teacher-bookclub-intro"></p>
         <div class="tbc-posters" id="teacher-bookclub-items"></div>
+      </div>
+
+      <div class="bookclub-strand" id="ihouse-bookclub">
+        <h2 class="section-heading">I-House Book Club</h2>
+        <div class="section-sub">Founded October 2023 · International House, Columbia University</div>
+        <p class="bookclub-intro" id="bookclub-intro"></p>
+        <div class="bookclub-stat-row" id="bookclub-stats"></div>
+
+        <div class="bookclub-gallery">
+          <img src="bookclub-canon-p2.jpg" alt="Curating the Book Club Canon, page 2" />
+          <img src="bookclub-canon-p3.jpg?v=2" alt="Curating the Book Club Canon, page 3" />
+          <img src="bookclub-canon-p4.jpg" alt="Curating the Book Club Canon, page 4" />
+        </div>
+
+        <div class="sessions-label">The I-House Book Club's Reading List</div>
+        <table class="sessions-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Text</th>
+              <th>Author</th>
+              <th class="loc-col">Location</th>
+              <th>Form</th>
+            </tr>
+          </thead>
+          <tbody id="sessions-tbody"></tbody>
+        </table>
       </div>
     </section>
 
