@@ -82,6 +82,14 @@ const CONTENT = {
       desc:  'Our Book Club’s 36th session. Wednesday, 9 December, 6–8 PM, at my apartment (E 63rd Street, UES). Ask me if you’d like a hard copy of the book.',
       poster: { src: 'photos/events/december-2026-the-end-of-everything.jpg', alt: 'Poster for the Book Club’s December 2026 session discussing The End of Everything by M. John Harrison, Wednesday 9 December, 6–8 PM, at Tara’s apartment on East 63rd Street, Upper East Side' },
     },
+    {
+      meta:  'Reading Group · 3 Mar 2027 · The Center for Fiction',
+      title: 'In Short: Salman Rushdie’s “The Disappeared”',
+      desc:  'A one-session reading group I’m leading at The Center for Fiction, in person, on Salman Rushdie’s short story “The Disappeared.” Wednesday, 3 March, 6–7:30 PM.',
+      links: [
+        { label: 'Register at centerforfiction.org', url: 'https://centerforfiction.org/group-workshop/in-short-salman-rushdies-the-disappeared-with-tara-fernandes/' },
+      ],
+    },
   ],
 
 
