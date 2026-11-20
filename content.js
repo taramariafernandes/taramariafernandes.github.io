@@ -71,12 +71,6 @@ const CONTENT = {
   // ════════════════════════════════════════════════════════════
   events: [
     {
-      meta:  'Book Club · 19 Nov 2026 · Josie & Vivien’s Apt',
-      title: '<em>The Vegetarian</em> by Han Kang',
-      desc:  'Our Book Club’s 35th session, on Han Kang’s novel, translated from the Korean by Deborah Smith. Thursday, 19 November, 6–8 PM, at Josie & Vivien’s apartment (113th Street, UWS). Ask me if you’d like a hard copy of the book.',
-      poster: { src: 'photos/events/november-2026-the-vegetarian.jpg', alt: 'Poster for the Book Club’s November 2026 session discussing The Vegetarian by Han Kang, translated from the Korean by Deborah Smith, Thursday 19 November, 6–8 PM, at Josie and Vivien’s apartment on 113th Street, Upper West Side' },
-    },
-    {
       meta:  'Book Club · 9 Dec 2026 · Tara’s Apt',
       title: '<em>The End of Everything</em> by M. John Harrison',
       desc:  'Our Book Club’s 36th session. Wednesday, 9 December, 6–8 PM, at my apartment (E 63rd Street, UES). Ask me if you’d like a hard copy of the book.',
@@ -103,6 +97,12 @@ const CONTENT = {
   //  for a landscape graphic where the normal size is hard to read.
   // ════════════════════════════════════════════════════════════
   pastEvents: [
+    {
+      meta:  'Book Club · 19 Nov 2026 · Josie & Vivien’s Apt',
+      title: '<em>The Vegetarian</em> by Han Kang',
+      desc:  'Our Book Club’s 35th session, on Han Kang’s novel, translated from the Korean by Deborah Smith. Thursday, 19 November, 6–8 PM, at Josie & Vivien’s apartment (113th Street, UWS).',
+      poster: { src: 'photos/events/november-2026-the-vegetarian.jpg', alt: 'Poster for the Book Club’s November 2026 session discussing The Vegetarian by Han Kang, translated from the Korean by Deborah Smith, Thursday 19 November, 6–8 PM, at Josie and Vivien’s apartment on 113th Street, Upper West Side' },
+    },
     {
       meta:  'Reading Group · 30 Sept–28 Oct 2026 · The Center for Fiction',
       title: 'Writing from South India',
