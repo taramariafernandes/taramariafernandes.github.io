@@ -349,6 +349,9 @@
     .event-poster.is-wide {
       width: 280px;
     }
+    .event-poster.has-w {
+      width: var(--w);
+    }
 
     .event-photos { clear: both; }
 
@@ -660,6 +663,9 @@
       .event-poster.is-wide {
         width: 190px;
       }
+      .event-poster.has-w {
+        width: min(var(--w), 150px);
+      }
       .bookclub-stat-row { flex-wrap: wrap; gap: 1rem; }
       .tbc-posters { grid-template-columns: repeat(2, 1fr); }
       .research-photos {
@@ -873,7 +879,7 @@ honEl.innerHTML = '<div class="edu-label">Honours &amp; Awards</div>' +
 document.getElementById('events-items').innerHTML =
   (CONTENT.events || []).map(e => `
     <div class="research-item clearfix">
-      ${e.poster ? `<a class="event-poster${e.poster.wide ? ' is-wide' : ''}" href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
+      ${e.poster ? `<a class="event-poster${e.poster.wide ? ' is-wide' : ''}${e.poster.width ? ' has-w' : ''}"${e.poster.width ? ` style="--w:${e.poster.width}px"` : ''} href="${e.poster.src}" target="_blank" rel="noopener"><img src="${e.poster.src}" alt="${e.poster.alt}" loading="lazy" /></a>` : ''}
       <div class="research-meta">${e.meta}</div>
       <div class="research-title">${e.title}</div>
       <div class="research-desc">${e.desc}</div>
@@ -884,7 +890,7 @@ document.getElementById('events-items').innerHTML =
 document.getElementById('past-events-items').innerHTML =
   (CONTENT.pastEvents || []).map(e => `
     <div class="research-item clearfix">
-      ${(e.posters || (e.poster ? [e.poster] : [])).map(p => `<a class="event-poster${p.wide ? ' is-wide' : ''}" href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.alt}" loading="lazy" /></a>`).join('')}
+      ${(e.posters || (e.poster ? [e.poster] : [])).map(p => `<a class="event-poster${p.wide ? ' is-wide' : ''}${p.width ? ' has-w' : ''}"${p.width ? ` style="--w:${p.width}px"` : ''} href="${p.src}" target="_blank" rel="noopener"><img src="${p.src}" alt="${p.alt}" loading="lazy" /></a>`).join('')}
       <div class="research-meta">${e.meta}</div>
       <div class="research-title">${e.title}</div>
       <div class="research-desc">${e.desc}</div>

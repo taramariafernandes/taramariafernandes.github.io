@@ -80,7 +80,7 @@ const CONTENT = {
       meta:  'Reading Group · 3 Mar 2027 · The Center for Fiction',
       title: 'In Short: Salman Rushdie’s “The Disappeared”',
       desc:  'A one-session reading group I’m leading at The Center for Fiction, in person, on Salman Rushdie’s short story “The Disappeared.” Wednesday, 3 March, 6–7:30 PM.',
-      poster: { src: 'photos/events/march-2027-center-for-fiction-in-short.jpg', alt: 'A still-life painting of a blue box, a yellow box, a tan vase and a potted plant on a small table beside a wooden chair, the image for the Center for Fiction session on Salman Rushdie’s “The Disappeared”', wide: true },
+      poster: { src: 'photos/events/march-2027-center-for-fiction-in-short.jpg', alt: 'A still-life painting of a blue box, a yellow box, a tan vase and a potted plant on a small table beside a wooden chair, the image for the Center for Fiction session on Salman Rushdie’s “The Disappeared”', width: 210 },
       links: [
         { label: 'Register at centerforfiction.org', url: 'https://centerforfiction.org/group-workshop/in-short-salman-rushdies-the-disappeared-with-tara-fernandes/' },
       ],
@@ -95,7 +95,8 @@ const CONTENT = {
   //  Extra option here: photos — a row of pictures shown below the
   //  text. Each is { src, alt } (caption is optional).
   //  A poster can also take wide: true to display larger — use it
-  //  for a landscape graphic where the normal size is hard to read.
+  //  for a landscape graphic where the normal size is hard to read —
+  //  or width: 210 (pixels) for a custom size.
   // ════════════════════════════════════════════════════════════
   pastEvents: [
     {
