@@ -76,6 +76,12 @@ const CONTENT = {
       desc:  'Our Book Club’s 35th session, on Han Kang’s novel, translated from the Korean by Deborah Smith. Thursday, 19 November, 6–8 PM, at Josie & Vivien’s apartment (113th Street, UWS). Ask me if you’d like a hard copy of the book.',
       poster: { src: 'photos/events/november-2026-the-vegetarian.jpg', alt: 'Poster for the Book Club’s November 2026 session discussing The Vegetarian by Han Kang, translated from the Korean by Deborah Smith, Thursday 19 November, 6–8 PM, at Josie and Vivien’s apartment on 113th Street, Upper West Side' },
     },
+    {
+      meta:  'Book Club · 9 Dec 2026 · Tara’s Apt',
+      title: '<em>The End of Everything</em> by M. John Harrison',
+      desc:  'Our Book Club’s 36th session. Wednesday, 9 December, 6–8 PM, at my apartment (E 63rd Street, UES). Ask me if you’d like a hard copy of the book.',
+      poster: { src: 'photos/events/december-2026-the-end-of-everything.jpg', alt: 'Poster for the Book Club’s December 2026 session discussing The End of Everything by M. John Harrison, Wednesday 9 December, 6–8 PM, at Tara’s apartment on East 63rd Street, Upper East Side' },
+    },
   ],
 
 
@@ -217,7 +223,7 @@ const CONTENT = {
 
   // The four summary numbers shown at the top:
   bookclubStats: {
-    sessions: 35,
+    sessions: 36,
     years:    '2.5+',
     authors:  '30+',
     forms:    6,
@@ -289,6 +295,7 @@ const CONTENT = {
     { n: 33, date: '16 Sep 2026', text: 'The Year of Magical Thinking',                                              author: 'Joan Didion',                   loc: "Renata's Apt",         form: 'memoir'  },
     { n: 34, date: '22 Oct 2026', text: 'Yesteryear',                                                               author: 'Caro Claire Burke',             loc: "Nam's Apt (74th St)",  form: 'novel'   },
     { n: 35, date: '19 Nov 2026', text: 'The Vegetarian',                                                           author: 'Han Kang, translated by Deborah Smith', loc: "Josie & Vivien's Apt (113th St)", form: 'novel'   },
+    { n: 36, date: '9 Dec 2026', text: 'The End of Everything',                                                    author: 'M. John Harrison',              loc: "Tara's Apt (E 63rd St)", form: 'novel'   },
   ],
 
 };
